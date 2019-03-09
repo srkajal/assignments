@@ -1,0 +1,12 @@
+1. Write a query to retrieve the book and its subject details using inner join.
+
+	SELECT b.title, b.price, b.volume, b.publish_date, s.sub_title, s.duration_in_hours FROM book b JOIN subject s ON b.subject_id = s.subject_id;
+	
+2.Write a query to retrieve the books list published in a given specific date interval.
+
+	SELECT title, price, volume, publish_date FROM book WHERE publish_date BETWEEN '2017-01-01' AND '2019-02-01';
+	
+3.Write a query to retrieve the number of books referred by each subject where the subject tite starts with a specific character (say ‘j’ for instance)
+
+	SELECT s.sub_title, COUNT(b.book_id) AS count FROM subject s LEFT JOIN book b ON s.subject_id = b.subject_id where s.sub_title like 's%' GROUP BY s.sub_title;
+

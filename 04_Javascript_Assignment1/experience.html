@@ -1,0 +1,196 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Experience</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="profile.css" />
+</head>
+
+<body>
+    <div class="container-fluid" id="mainDiv">
+        <div class="page-header">
+            <h3>Experience</h3>
+            <a href="navigation.html" class="btn btn-link btn-primary" role="button" aria-pressed="true" style="float: right;">Back</a>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addExpModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Enter Previous Experience</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Previous Experience Details</p>
+                        <label for="hireDate">Hire Date:</label>
+                        <input type="date" id="hireDate" name="hireDate" placeholder="dd/MM/YYYY" class="form-control"
+                            required />
+                        <label for="endDate">End Date:</label>
+                        <input type="date" id="endDate" name="endDate" placeholder="dd/MM/YYYY" class="form-control"
+                            required />
+                        <label for="employeer">Employeer:</label>
+                        <input type="text" id="employeer" name="employeer" placeholder="Employeer Name" class="form-control"
+                            required />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="btnSave" class="btn btn-primary" data-dismiss="modal" onclick="addExperience()">Save changes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="div1" class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-xs-1">
+                        <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#addExpModal">+</button>
+                    </div>
+                    <div class="col-xs-1">
+                        <button type="button" class="btn btn-info btn-md" onclick="removeExperience()">-</button>
+                    </div>
+                    <div class="col-xs-10"></div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Experience Details
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="row">
+                            <div class="col-xs-4 text-primary">No of Degrees</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary">1</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 text-primary">No of Previous Employeer</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary" id="noOfPreviousEmployeer">1</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 text-primary">Total Experice(months)</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary" id="ttExperience">28</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-6" id="preExpDiv1">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Previous Work Experience - 1
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="row">
+                            <div class="col-xs-4 text-primary" >Hire Date</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary" id="previousHireDate1">2010-02-10</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 text-primary">End Date</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary" id="previousEndDate1">2015-03-04</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 text-primary">Employeer</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary">A B Company</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        
+        function addExperience() {
+            var element1 = document.getElementById("div1");
+            var hireDate = document.getElementById("hireDate").value;
+            var endDate = document.getElementById("endDate").value;
+            var employeer = document.getElementById("employeer").value;
+            var noOfPreviousEmployeer = document.getElementById("noOfPreviousEmployeer").innerHTML;
+            var ttExperience = document.getElementById("ttExperience").innerHTML;
+            var months = monthDiff(hireDate,endDate);
+            var previousHireDate = document.getElementById("previousHireDate"+noOfPreviousEmployeer).innerHTML;
+            var newNoOfPreviousEmployeer = parseInt(noOfPreviousEmployeer, 10)+1;
+        
+            var flag1 = validation(endDate,hireDate,"Hire date should not be greater than end date");
+            var flag2 = validation(previousHireDate,endDate,"Previous Work Experience - "+noOfPreviousEmployeer+" Hire date should be greater than Previous Work Experience - "+ newNoOfPreviousEmployeer +" end date");
+
+            if(flag1 && flag2){
+                element1.innerHTML += '<div class="col-sm-6" id="preExpDiv'+newNoOfPreviousEmployeer+'"><div class="panel panel-info"><div class="panel-heading">Previous Work Experience - '+newNoOfPreviousEmployeer+'</div><div class="panel-body"><div class="row"><div class="col-xs-4 text-primary">Hire Date</div><div class="col-xs-1">:</div><div class="col-xs-7 text-secondary" id="previousHireDate'+newNoOfPreviousEmployeer+'">' + hireDate + '</div></div><div class="row"><div class="col-xs-4 text-primary">End Date</div><div class="col-xs-1">:</div><div class="col-xs-7 text-secondary" id="previousEndDate'+newNoOfPreviousEmployeer+'">' + endDate + '</div></div><div class="row"><div class="col-xs-4 text-primary">Employeer</div><div class="col-xs-1">:</div><div class="col-xs-7 text-secondary">' + employeer + '</div></div></div></div></div>';
+                document.getElementById("ttExperience").innerHTML = parseInt(ttExperience, 10) + months;
+                document.getElementById("noOfPreviousEmployeer").innerHTML = newNoOfPreviousEmployeer;
+            }
+            
+        }
+
+        function removeExperience(){
+            var element1 = document.getElementById("div1");
+            var noOfPreviousEmployeer = document.getElementById("noOfPreviousEmployeer").innerHTML;
+            var newNoOfPreviousEmployeer = parseInt(noOfPreviousEmployeer, 10);
+            var previousHiredate = document.getElementById("previousHireDate"+noOfPreviousEmployeer).innerHTML;
+            var previousEndDate = document.getElementById("previousEndDate"+noOfPreviousEmployeer).innerHTML;
+            var ttExperience = document.getElementById("ttExperience").innerHTML;
+
+            var months = monthDiff(previousHiredate,previousEndDate);
+            if(newNoOfPreviousEmployeer >1){
+                
+                element1.removeChild(element1.lastChild);
+                document.getElementById("noOfPreviousEmployeer").innerHTML = newNoOfPreviousEmployeer -1;
+                document.getElementById("ttExperience").innerHTML = parseInt(ttExperience, 10) - months;
+            } else {
+                alert("No of Previous employee should not be lass than 1");
+            }
+            
+            
+        }
+
+        function monthDiff(d1, d2) {
+            var d4 = dateByString(d2);
+            var d3 = dateByString(d1);
+
+            var diff =(d4.getTime() - d3.getTime()) / 1000;
+            diff /= (60 * 60 * 24 * 7 * 4);
+            return Math.abs(Math.floor(diff));
+        }
+
+        function dateByString(d){
+            var d2 = d.split('-');
+            //console.info(d2[0]+','+d2[1]+','+d[2]);
+            return new Date(d2[0],d2[1]-1,d2[2]);
+        }
+
+        function validation(d5,d6,message){
+            var d7 = dateByString(d5);
+            var d8 = dateByString(d6);
+
+            //console.info(d5+','+d6);
+            if(d7.getTime()<d8.getTime()){
+                alert(message);
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Experience</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="profile.css" />
+</head>
+
+<body>
+    <div class="container-fluid" id="mainDiv">
+        <div class="page-header">
+            <h3>Experience</h3>
+            <a href="navigation.html" class="btn btn-link btn-primary" role="button" aria-pressed="true" style="float: right;">Back</a>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addExpModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Enter Previous Experience</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Previous Experience Details</p>
+                        <label for="hireDate">Hire Date:</label>
+                        <input type="date" id="hireDate" name="hireDate" placeholder="dd/MM/YYYY" class="form-control"
+                            required />
+                        <label for="endDate">End Date:</label>
+                        <input type="date" id="endDate" name="endDate" placeholder="dd/MM/YYYY" class="form-control"
+                            required />
+                        <label for="employeer">Employeer:</label>
+                        <input type="text" id="employeer" name="employeer" placeholder="Employeer Name" class="form-control"
+                            required />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="addExperienceId" class="btn btn-primary" data-dismiss="modal" >Save changes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="div1" class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-xs-1">
+                        <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#addExpModal">+</button>
+                    </div>
+                    <div class="col-xs-1">
+                        <button type="button" id="removeExperienceId" class="btn btn-info btn-md">-</button>
+                    </div>
+                    <div class="col-xs-10"></div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Experience Details
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="row">
+                            <div class="col-xs-4 text-primary">No of Degrees</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary">1</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 text-primary">No of Previous Employeer</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary" id="noOfPreviousEmployeer">1</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 text-primary">Total Experice(months)</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary" id="ttExperience">28</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-6" id="preExpDiv1">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Previous Work Experience - 1
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4 text-primary" >Hire Date</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary" id="previousHireDate1">2010-02-10</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 text-primary">End Date</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary" id="previousEndDate1">2015-03-04</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 text-primary">Employeer</div>
+                            <div class="col-xs-1">:</div>
+                            <div class="col-xs-7 text-secondary">A B Company</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/experience.js"></script>
+</body>
+
+</html>
