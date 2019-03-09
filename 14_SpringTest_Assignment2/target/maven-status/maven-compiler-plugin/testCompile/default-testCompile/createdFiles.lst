@@ -1,8 +1,0 @@
-org\kajal\mallick\dao\ReadWriteDaoImplTest.class
-org\kajal\mallick\service\ReadWriteOperationImplTest.class
-org\kajal\mallick\entities\BookTest.class
-org\kajal\mallick\entities\SubjectTest.class
-org\kajal\mallick\model\SearchSubjectTest.class
-org\kajal\mallick\model\SearchBookTest.class
-org\kajal\mallick\model\BookDtoTest.class
-org\kajal\mallick\controller\SubjectControllerTest.class

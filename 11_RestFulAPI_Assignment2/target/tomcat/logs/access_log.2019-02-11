@@ -1,8 +1,0 @@
-0:0:0:0:0:0:0:1 - - [11/Feb/2019:08:16:22 +0530] "GET /book/findAllBooks HTTP/1.1" 200 279 http-bio-8080-exec-1 532
-0:0:0:0:0:0:0:1 - - [11/Feb/2019:09:22:58 +0530] "GET /book/findBookById/5 HTTP/1.1" 200 104 http-bio-8080-exec-1 320
-0:0:0:0:0:0:0:1 - - [11/Feb/2019:09:23:55 +0530] "GET /book/findBookById/5 HTTP/1.1" 200 104 http-bio-8080-exec-3 12
-0:0:0:0:0:0:0:1 - - [11/Feb/2019:09:24:03 +0530] "GET /book/findBookById/10 HTTP/1.1" 200 92 http-bio-8080-exec-5 9
-0:0:0:0:0:0:0:1 - - [11/Feb/2019:09:25:46 +0530] "GET /book/findBookById/10 HTTP/1.1" 200 92 http-bio-8080-exec-1 264
-0:0:0:0:0:0:0:1 - - [11/Feb/2019:09:27:19 +0530] "DELETE /book/delete/10 HTTP/1.1" 200 95 http-bio-8080-exec-3 11
-0:0:0:0:0:0:0:1 - - [11/Feb/2019:09:29:02 +0530] "GET /book/findBookById/10 HTTP/1.1" 200 92 http-bio-8080-exec-1 29221
-0:0:0:0:0:0:0:1 - - [11/Feb/2019:09:32:00 +0530] "GET /book/findBookById/10 HTTP/1.1" 200 23 http-bio-8080-exec-1 4817
