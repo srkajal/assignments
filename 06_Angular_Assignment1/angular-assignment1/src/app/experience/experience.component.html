@@ -1,3 +1,107 @@
-<p>
-  experience works!
-</p>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Experience</title>
+
+</head>
+
+<body>
+    <div class="container-fluid" id="mainDiv">
+        <div class="page-header">
+            <h3>Experience</h3>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addExpModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Enter Previous Experience</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Previous Experience Details</p>
+                        <label for="hireDate">Hire Date:</label>
+                        <input type="date" id="hireDate" name="hireDate" placeholder="dd/MM/YYYY" class="form-control"
+                            required />
+                        <label for="endDate">End Date:</label>
+                        <input type="date" id="endDate" name="endDate" placeholder="dd/MM/YYYY" class="form-control"
+                            required />
+                        <label for="employeer">Employeer:</label>
+                        <input type="text" id="employeer" name="employeer" placeholder="Employeer Name"
+                            class="form-control" required />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="addExperienceId" class="btn btn-primary" data-dismiss="modal">Save
+                            changes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addExpModal">+</button>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-info">-</button>
+        </div>
+
+        <div class="card">
+            <div class="card-header bg-info text-white">Experience Details</div>
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td class="text-primary">No of Degrees</td>
+                        <td>:</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td class="text-primary">No of Previous Employeer</td>
+                        <td>:</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td class="text-primary">Total Experice(months)</td>
+                        <td>:</td>
+                        <td>28</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header bg-info text-white">Previous Work Experience - 1</div>
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td class="text-primary">Hire Date</td>
+                        <td>:</td>
+                        <td>2010-02-10</td>
+                    </tr>
+                    <tr>
+                        <td class="text-primary">End Date</td>
+                        <td>:</td>
+                        <td>2015-03-04</td>
+                    </tr>
+                    <tr>
+                        <td class="text-primary">Employeer</td>
+                        <td>:</td>
+                        <td>A B Company</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
