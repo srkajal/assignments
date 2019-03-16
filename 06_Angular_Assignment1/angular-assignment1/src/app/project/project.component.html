@@ -1,3 +1,193 @@
-<p>
-  project works!
-</p>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects</title>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="page-header">
+      <h3>Projects</h3>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="addProjectModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Enter Project Details</h4>
+          </div>
+          <div class="modal-body">
+            <p>Project Details</p>
+            <label for="projectId">Project Id:</label>
+            <input type="number" id="projectId" name="projectId" placeholder="Project Id" class="form-control"
+              required />
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" name="projectName" placeholder="Project Name" class="form-control"
+              required />
+            <label for="StartDate">Start Date:</label>
+            <input type="date" id="startDateProj" name="StartDate" placeholder="dd/MM/YYYY" class="form-control"
+              required />
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDateProj" name="endDate" placeholder="dd/MM/YYYY" class="form-control" required />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" id="saveProjectId" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Assignment Modal -->
+    <div class="modal fade" id="addAssignmentModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Enter Assignment Details</h4>
+          </div>
+          <div class="modal-body">
+            <p>Assignment Details</p>
+            <label for="customerId">Customer Id:</label>
+            <input type="number" id="customerId" name="customerId" placeholder="Customer Id" class="form-control"
+              required />
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" placeholder="Customer Name" class="form-control"
+              required />
+            <label for="StartDate">Assignment Start Date:</label>
+            <input type="date" id="startDateAss" name="StartDate" placeholder="dd/MM/YYYY" class="form-control"
+              required />
+            <label for="endDate">Assignment End Date:</label>
+            <input type="date" id="endDateAss" name="endDate" placeholder="dd/MM/YYYY" class="form-control" required />
+            <label for="projectLocation">Project Location:</label>
+            <input type="text" id="projectLocation" name="projectLocation" placeholder="Project Location"
+              class="form-control" required />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" id="addAssignmentId" class="btn btn-primary" data-dismiss="modal">Save
+              changes</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row" id="rowDiv">
+
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-xs-1">
+            <button type="button" class="btn btn-info btn-md" data-toggle="modal"
+              data-target="#addProjectModal">+</button>
+          </div>
+          <div class="col-xs-1">
+            <button type="button" id="removeProjectId" class="btn btn-info btn-md">-</button>
+          </div>
+          <div class="col-xs-10"></div>
+        </div>
+      </div>
+      <br>
+      <input type="hidden" value="1" id="divProjectHid" />
+      <div id="divProject">
+        <div class="col-sm-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              Project - 1
+            </div>
+            <div class="panel-body">
+
+              <div class="row">
+                <div class="col-xs-4 text-primary">Project Id</div>
+                <div class="col-xs-1">:</div>
+                <div class="col-xs-7 text-secondary">123456</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 text-primary">Project Name</div>
+                <div class="col-xs-1">:</div>
+                <div class="col-xs-7 text-secondary">On-line Management</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 text-primary">Start Date</div>
+                <div class="col-xs-1">:</div>
+                <div class="col-xs-7 text-secondary">2015-03-02</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 text-primary">End Date</div>
+                <div class="col-xs-1">:</div>
+                <div class="col-xs-7 text-secondary">2017-04-14</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-xs-1">
+            <button type="button" class="btn btn-info btn-md" data-toggle="modal"
+              data-target="#addAssignmentModal">+</button>
+          </div>
+          <div class="col-xs-1">
+            <button type="button" id="removeAssignmentId" class="btn btn-info btn-md">-</button>
+          </div>
+          <div class="col-xs-10"></div>
+        </div>
+      </div>
+      <br>
+      <input type="hidden" value="1" id="divAssignmentHid" />
+      <div id="divAssignment">
+        <div class="col-sm-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              Assignment - 1
+            </div>
+            <div class="panel-body">
+
+              <div class="row">
+                <div class="col-xs-4 text-primary">Customer Id</div>
+                <div class="col-xs-1">:</div>
+                <div class="col-xs-7 text-secondary">123456</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 text-primary">Customer Name</div>
+                <div class="col-xs-1">:</div>
+                <div class="col-xs-7 text-secondary">Some Customer</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 text-primary">Assignment Start Date</div>
+                <div class="col-xs-1">:</div>
+                <div class="col-xs-7 text-secondary">2015-02-03</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 text-primary">Assignment End Date</div>
+                <div class="col-xs-1">:</div>
+                <div class="col-xs-7 text-secondary">2017-01-14</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 text-primary">Project Location</div>
+                <div class="col-xs-1">:</div>
+                <div class="col-xs-7 text-secondary">Bangalore</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
