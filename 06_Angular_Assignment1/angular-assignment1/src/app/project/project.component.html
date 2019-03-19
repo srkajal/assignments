@@ -84,110 +84,81 @@
       </div>
     </div>
 
-    <div class="row" id="rowDiv">
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addProjectModal">+</button>
 
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-xs-1">
-            <button type="button" class="btn btn-info btn-md" data-toggle="modal"
-              data-target="#addProjectModal">+</button>
-          </div>
-          <div class="col-xs-1">
-            <button type="button" id="removeProjectId" class="btn btn-info btn-md">-</button>
-          </div>
-          <div class="col-xs-10"></div>
-        </div>
-      </div>
-      <br>
-      <input type="hidden" value="1" id="divProjectHid" />
-      <div id="divProject">
-        <div class="col-sm-6">
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              Project - 1
-            </div>
-            <div class="panel-body">
-
-              <div class="row">
-                <div class="col-xs-4 text-primary">Project Id</div>
-                <div class="col-xs-1">:</div>
-                <div class="col-xs-7 text-secondary">123456</div>
-              </div>
-              <div class="row">
-                <div class="col-xs-4 text-primary">Project Name</div>
-                <div class="col-xs-1">:</div>
-                <div class="col-xs-7 text-secondary">On-line Management</div>
-              </div>
-              <div class="row">
-                <div class="col-xs-4 text-primary">Start Date</div>
-                <div class="col-xs-1">:</div>
-                <div class="col-xs-7 text-secondary">2015-03-02</div>
-              </div>
-              <div class="row">
-                <div class="col-xs-4 text-primary">End Date</div>
-                <div class="col-xs-1">:</div>
-                <div class="col-xs-7 text-secondary">2017-04-14</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-xs-1">
-            <button type="button" class="btn btn-info btn-md" data-toggle="modal"
-              data-target="#addAssignmentModal">+</button>
-          </div>
-          <div class="col-xs-1">
-            <button type="button" id="removeAssignmentId" class="btn btn-info btn-md">-</button>
-          </div>
-          <div class="col-xs-10"></div>
-        </div>
-      </div>
-      <br>
-      <input type="hidden" value="1" id="divAssignmentHid" />
-      <div id="divAssignment">
-        <div class="col-sm-6">
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              Assignment - 1
-            </div>
-            <div class="panel-body">
-
-              <div class="row">
-                <div class="col-xs-4 text-primary">Customer Id</div>
-                <div class="col-xs-1">:</div>
-                <div class="col-xs-7 text-secondary">123456</div>
-              </div>
-              <div class="row">
-                <div class="col-xs-4 text-primary">Customer Name</div>
-                <div class="col-xs-1">:</div>
-                <div class="col-xs-7 text-secondary">Some Customer</div>
-              </div>
-              <div class="row">
-                <div class="col-xs-4 text-primary">Assignment Start Date</div>
-                <div class="col-xs-1">:</div>
-                <div class="col-xs-7 text-secondary">2015-02-03</div>
-              </div>
-              <div class="row">
-                <div class="col-xs-4 text-primary">Assignment End Date</div>
-                <div class="col-xs-1">:</div>
-                <div class="col-xs-7 text-secondary">2017-01-14</div>
-              </div>
-              <div class="row">
-                <div class="col-xs-4 text-primary">Project Location</div>
-                <div class="col-xs-1">:</div>
-                <div class="col-xs-7 text-secondary">Bangalore</div>
-              </div>
-            </div>
-          </div>
+    <button type="button" class="btn btn-info">-</button>
+    <input type="hidden" value="1" id="divAssignmentHid" />
+    <div *ngFor="let project of projects; let i=index">
+      <div class="card">
+        <div class="card-header bg-info text-white">Project - {{i + 1}}</div>
+        <div class="card-body">
+          <table class="table">
+            <tr>
+              <td class="text-primary">Project Id</td>
+              <td>:</td>
+              <td>{{project.projectId}}</td>
+            </tr>
+            <tr>
+              <td class="text-primary">Project Name</td>
+              <td>:</td>
+              <td>{{project.projectName}}</td>
+            </tr>
+            <tr>
+              <td class="text-primary">Start Date</td>
+              <td>:</td>
+              <td>{{project.startDate | date}}</td>
+            </tr>
+            <tr>
+              <td class="text-primary">End Date</td>
+              <td>:</td>
+              <td>{{project.endDate | date}}</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
+    
+    <br>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addAssignmentModal">+</button>
+
+    <button type="button" class="btn btn-info">-</button>
+    <input type="hidden" value="1" id="divProjectHid" />
+    <div *ngFor="let assignment of assignments; let i=index">
+      <div class="card">
+        <div class="card-header bg-info text-white">Assignment - {{i+1}}</div>
+        <div class="card-body">
+          <table class="table">
+            <tr>
+              <td class="text-primary">Customer Id</td>
+              <td>:</td>
+              <td>{{assignment.customerId}}</td>
+            </tr>
+            <tr>
+              <td class="text-primary">Customer Name</td>
+              <td>:</td>
+              <td>{{assignment.customerName}}</td>
+            </tr>
+            <tr>
+              <td class="text-primary">Assignment Start Date</td>
+              <td>:</td>
+              <td>{{assignment.startDate | date}}</td>
+            </tr>
+            <tr>
+              <td class="text-primary">Assignment End Date</td>
+              <td>:</td>
+              <td>{{assignment.endDate | date}}</td>
+            </tr>
+            <tr>
+              <td class="text-primary">Project Location</td>
+              <td>:</td>
+              <td>{{assignment.location}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    
   </div>
-
-
 </body>
 
 </html>

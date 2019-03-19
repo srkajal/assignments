@@ -43,3 +43,22 @@ h4 {
     margin: 0 auto;
     background:url('/home/assets/Kajal_Gray_Background.jpg') no-repeat center center;
 } */
+
+h3 {
+    color: white;
+    background-color: darkcyan;
+    width: 30rem;
+    text-align: center;
+}
+
+.card {
+    width: 30rem;
+}
+
+.page-header {
+    width: 30rem;
+    text-align: center;
+}
+.card-header{
+    text-align: center;
+}

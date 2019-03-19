@@ -5,6 +5,7 @@ import { ContactmeComponent } from './contactme/contactme.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ProfileHighlightComponent } from './profile-highlight/profile-highlight.component';
 import { ProjectComponent } from './project/project.component';
+import { PersonalBiographyComponent } from './personal-biography/personal-biography.component';
 
 const routes: Routes = [
   {path:"", redirectTo: "home", pathMatch: "full"},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:"contactMe", component: ContactmeComponent},
   {path:"experience", component: ExperienceComponent},
   {path:"profileHighlight", component: ProfileHighlightComponent},
+  {path:"personalBiography", component: PersonalBiographyComponent},
   {path:"project", component: ProjectComponent}
 ];
 

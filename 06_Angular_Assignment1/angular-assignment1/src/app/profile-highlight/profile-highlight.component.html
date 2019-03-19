@@ -15,40 +15,40 @@
       <h3>Profile Highlights</h3>
     </div>
 
-    <div class="panel panel-info">
-      <div class="panel-heading">
-        My Profile
-      </div>
-      <div class="panel-body">
-
-        <div class="row">
-          <div class="col-xs-4 text-primary">Total Experience</div>
-          <div class="col-xs-1">:</div>
-          <div class="col-xs-7 text-secondary">5yr</div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4 text-primary">Domain</div>
-          <div class="col-xs-1">:</div>
-          <div class="col-xs-7 text-secondary">Retail</div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4 text-primary">Skill</div>
-          <div class="col-xs-1">:</div>
-          <div class="col-xs-7 text-secondary">Java/J2ee</div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4 text-primary">Technologies</div>
-          <div class="col-xs-1">:</div>
-          <div class="col-xs-7 text-secondary">
-            <ol>
-              <li>Spring</li>
-              <li>Hibernate</li>
-              <li>Core java</li>
-            </ol>
-          </div>
-        </div>
+    <div class="card">
+      <div class="card-header bg-info text-white">My Profile</div>
+      <div class="card-body">
+        <table class="table">
+          <tr>
+            <td class="text-primary">Total Experience</td>
+            <td>:</td>
+            <td>{{myProfile.totalExperience}}yr</td>
+          </tr>
+          <tr>
+            <td class="text-primary">Domain</td>
+            <td>:</td>
+            <td>{{myProfile.domian}}</td>
+          </tr>
+          <tr>
+            <td class="text-primary">Skill</td>
+            <td>:</td>
+            <td>{{myProfile.skill}}</td>
+          </tr>
+          <tr>
+            <td class="text-primary">Technologies</td>
+            <td>:</td>
+            <td>
+              <table class="table-striped">
+                <tr *ngFor="let technology of myProfile.technologies">
+                  <td>{{technology}}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
+
   </div>
 </body>
 
