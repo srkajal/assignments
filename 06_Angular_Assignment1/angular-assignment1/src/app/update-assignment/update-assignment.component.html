@@ -1,0 +1,32 @@
+<h2>Enter Assignment Details</h2>
+
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="customerId">Customer Id:</label>
+    <input type="number" formControlName="customerId" id="customerId" name="customerId" placeholder="Customer Id"
+      class="form-control" required />
+  </div>
+
+  <div class="form-group">
+    <label for="customerName">Customer Name:</label>
+    <input type="text" formControlName="customerName" id="customerName" name="customerName" placeholder="Customer Name"
+      class="form-control" required />
+  </div>
+
+  <div class="form-group">
+    <label for="startDate">Assignment Start Date:</label>
+    <input type="date" formControlName="startDate" placeholder="Start Date" name="startDate" class="form-control"
+      id="startDate">
+  </div>
+  <div class="form-group">
+    <label for="endDate">Assignment End Date:</label>
+    <input type="date" formControlName="endDate" placeholder="End Date" name="endDate" class="form-control"
+      id="endDate">
+  </div>
+  <div class="form-group">
+    <label for="location">Project Location:</label>
+    <input type="text" formControlName="location" placeholder="Location" name="location" class="form-control"
+      id="location">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,21 @@
+<h2>Enter Project Details</h2>
+
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="projectId">Project Id:</label>
+        <input type="number" formControlName="projectId" placeholder="Project Id" name="projectId" class="form-control" id="projectId">
+      </div>
+      <div class="form-group">
+          <label for="projectName">Project Name:</label>
+          <input type="text" formControlName="projectName" placeholder="Project Name" name="projectName" class="form-control" id="projectName">
+        </div>
+  <div class="form-group">
+    <label for="startDate">Start Date:</label>
+    <input type="date" formControlName="startDate" placeholder="dd-mm-yyyy" name="startDate" class="form-control" id="startDate">
+  </div>
+  <div class="form-group">
+    <label for="endDate">End Date:</label>
+    <input type="date" formControlName="endDate" placeholder="dd-mm-yyyy" name="endDate" class="form-control" id="endDate">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-contactme',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactmeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
+  addForm: FormGroup;
+  
   ngOnInit() {
   }
 

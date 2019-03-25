@@ -15,78 +15,9 @@
       <h3>Projects</h3>
     </div>
 
-    <!-- Project Modal -->
-    <div class="modal fade" id="addProjectModal" role="dialog">
-      <div class="modal-dialog">
+    <button type="button" class="btn btn-info" (click)="addProject()">+</button>
 
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Enter Project Details</h4>
-          </div>
-          <div class="modal-body">
-            <p>Project Details</p>
-            <label for="projectId">Project Id:</label>
-            <input type="number" id="projectId" name="projectId" placeholder="Project Id" class="form-control"
-              required />
-            <label for="projectName">Project Name:</label>
-            <input type="text" id="projectName" name="projectName" placeholder="Project Name" class="form-control"
-              required />
-            <label for="StartDate">Start Date:</label>
-            <input type="date" id="startDateProj" name="StartDate" placeholder="dd/MM/YYYY" class="form-control"
-              required />
-            <label for="endDate">End Date:</label>
-            <input type="date" id="endDateProj" name="endDate" placeholder="dd/MM/YYYY" class="form-control" required />
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" id="saveProjectId" class="btn btn-primary" data-dismiss="modal">Save changes</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Assignment Modal -->
-    <div class="modal fade" id="addAssignmentModal" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Enter Assignment Details</h4>
-          </div>
-          <div class="modal-body">
-            <p>Assignment Details</p>
-            <label for="customerId">Customer Id:</label>
-            <input type="number" id="customerId" name="customerId" placeholder="Customer Id" class="form-control"
-              required />
-            <label for="customerName">Customer Name:</label>
-            <input type="text" id="customerName" name="customerName" placeholder="Customer Name" class="form-control"
-              required />
-            <label for="StartDate">Assignment Start Date:</label>
-            <input type="date" id="startDateAss" name="StartDate" placeholder="dd/MM/YYYY" class="form-control"
-              required />
-            <label for="endDate">Assignment End Date:</label>
-            <input type="date" id="endDateAss" name="endDate" placeholder="dd/MM/YYYY" class="form-control" required />
-            <label for="projectLocation">Project Location:</label>
-            <input type="text" id="projectLocation" name="projectLocation" placeholder="Project Location"
-              class="form-control" required />
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" id="addAssignmentId" class="btn btn-primary" data-dismiss="modal">Save
-              changes</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addProjectModal">+</button>
-
-    <button type="button" class="btn btn-info">-</button>
+    <button type="button" class="btn btn-info" (click)="removeProject()">-</button>
     <input type="hidden" value="1" id="divAssignmentHid" />
     <div *ngFor="let project of projects; let i=index">
       <div class="card">
@@ -119,9 +50,9 @@
     </div>
     
     <br>
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addAssignmentModal">+</button>
+    <button type="button" class="btn btn-info" (click)="addAssignment()">+</button>
 
-    <button type="button" class="btn btn-info">-</button>
+    <button type="button" class="btn btn-info" (click)="removeAssignment()">-</button>
     <input type="hidden" value="1" id="divProjectHid" />
     <div *ngFor="let assignment of assignments; let i=index">
       <div class="card">
