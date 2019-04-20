@@ -14,8 +14,7 @@ export class ProjectComponent implements OnInit {
 
   constructor(private router: Router) { 
     this.projects =  [new Project(12, "AWS", new Date("02-03-2015"), new Date("02-03-2017"))];
-    this.assignments = [new Assignment(1234, "ABC", new Date("02-03-2015"), new Date("02-03-2016"), "Bangalore"),
-                        new Assignment(1235, "ABD", new Date("02-03-2016"), new Date("02-03-2017"), "Bangalore")];
+    this.assignments = [new Assignment(1235, "ABD", new Date("02-03-2016"), new Date("02-03-2017"), "Bangalore")];
 
   }
 

@@ -24,7 +24,7 @@ public class JpaConfig {
     private static final String DATABASE = "/restful_assignment";
     private static final String JDBC_URL = BASE_URL + DATABASE  + "?useSSL=false";
     private static final String USER_NAME = "root";
-    private static final String PASSWORD = "root";
+    private static final String PASSWORD = "admin";
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(){
