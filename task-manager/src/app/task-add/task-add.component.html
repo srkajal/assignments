@@ -1,3 +1,59 @@
-<p>
-  task-add works!
-</p>
+<div class="container">
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-2"><label for="task" class="mb-2 mr-sm-1">Task:</label></div>
+      <div class="col-md-6"><input type="text" formControlName="task" class="form-control mb-2 mr-sm-2" id="task"
+          placeholder="Enter task" name="task"></div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-1">0</div>
+      <div class="col-md-4"></div>
+      <div class="col-md-1">
+        <div class="row">
+          <div class="col-md-6"></div>
+          <div class="col-md-6">30</div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2"><label for="priority">Priority</label></div>
+      <div class="col-md-6"><input type="range" formControlName="priority" class="custom-range" id="priority"
+          name="priority" min="1" max="30" value="15"></div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2"><label for="parent_id" class="mb-2 mr-sm-1">Parent Task:</label></div>
+      <div class="col-md-6"><input type="number" formControlName="parent_id" class="form-control mb-2 mr-sm-2"
+          id="parent_id" placeholder="Enter Parent task" name="parent_id"></div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2"><label for="start_date" class="mb-2 mr-sm-1">Start Date:</label></div>
+      <div class="col-md-6"><input type="date" formControlName="start_date" class="form-control mb-2 mr-sm-2"
+          id="start_date" placeholder="Enter Start Date" name="start_date"></div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2"><label for="end_date" class="mb-2 mr-sm-1">End Date:</label></div>
+      <div class="col-md-6"><input type="date" formControlName="end_date" class="form-control mb-2 mr-sm-2"
+          id="end_date" placeholder="Enter End Date" name="end_date"></div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-2"><button class="btn btn-secondary">Add Task</button></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-6"></div>
+    </div>
+
+  </form>
+</div>

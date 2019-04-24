@@ -1,52 +1,80 @@
 <div class="container">
-  <h2>Task Manager</h2>         
+  <h2>Task Manager</h2>
+
+  <!-- <form action="#"> -->
+    <div class="row">
+      <div class="col-md-2"><label for="task" class="mb-2 mr-sm-2">Task:</label></div>
+      <div class="col-md-4"><input type="text" class="form-control mb-2 mr-sm-2" id="task" placeholder="Enter task"
+          name="task"></div>
+      <div class="col-md-2"><label for="parentTask" class="mb-2 mr-sm-2">Parent Task:</label></div>
+      <div class="col-md-4"><input type="text" class="form-control mb-2 mr-sm-1" id="parentTask"
+          placeholder="Enter parent task" name="parentTask"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+          <div class="row">
+              <div class="col-md-6"><label for="prirotyFrom" class="mb-2 mr-sm-1">Priroty From:</label></div>
+              <div class="col-md-6"><input type="number" class="form-control mb-2 mr-sm-1" id="prirotyFrom"
+                name="prirotyFrom"></div>
+            </div>
+      </div>
+    
+      
+      <div class="col-md-2">
+          <div class="row">
+              <div class="col-md-6"><label for="prirotyTo" class="mb-2 mr-sm-1">Priority To:</label></div>
+              <div class="col-md-6"><input type="number" class="form-control mb-2 mr-sm-1" id="prirotyTo"
+                name="prirotyTo"></div>
+            </div>
+      </div>
+
+      <div class="col-md-4">
+          <div class="row">
+              <div class="col-md-4"><label for="startDate" class="mb-2 mr-sm-2">Start Date:</label></div>
+              <div class="col-md-8"><input type="date" class="form-control mb-2 mr-sm-2" id="startDate"
+                placeholder="Enter date" name="startDate" ></div>
+            </div>
+      </div>
+
+      <div class="col-md-4">
+          <div class="row">
+              <div class="col-md-4"><label for="endDate" class="mb-2 mr-sm-2">End Date:</label></div>
+              <div class="col-md-8"><input type="date" class="form-control mb-2 mr-sm-2" id="endDate"
+                placeholder="Enter date" name="endDate"></div>
+            </div>
+      </div>
+    </div>
+  <!-- </form> -->
+
+  <div class="row">
+      <div class="col"><hr></div>
+  </div>
+
   <table class="table table-borderless">
-    <thead>
-      <tr>
-        <th>Task</th>
-        <th>Parent</th>
-        <th>Priority</th>
-        <th>Start</th>
-        <th>End</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="bg-secondary text-white">Task 1</td>
-        <td class="bg-secondary text-white">Parent Task 1</td>
-        <td>1</td>
-        <td>2018-01-01</td>
-        <td>2018-07-07</td>
-        <td><button type="button" class="btn btn-secondary">Edit Task</button></td>
-        <td><button type="button" class="btn btn-secondary">End Task</button></td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="table table-borderless">
-    <thead>
-      <tr>
-        <th>Task</th>
-        <th>Parent</th>
-        <th>Priority</th>
-        <th>Start</th>
-        <th>End</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="bg-secondary text-white">Task 2</td>
-        <td class="bg-secondary text-white">Parent Task 2</td>
-        <td>2</td>
-        <td>2019-01-01</td>
-        <td>2018-04-04</td>
-        <td><button type="button" class="btn btn-secondary">Edit Task</button></td>
-        <td><button type="button" class="btn btn-secondary">End Task</button></td>
-      </tr>
-    </tbody>
+    <div *ngFor="let task of taskList">
+        <thead>
+            <tr>
+              <th>Task</th>
+              <th>Parent</th>
+              <th>Priority</th>
+              <th>Start</th>
+              <th>End</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rounded bg-secondary text-white">{{task.task}}</td>
+              <td class="rounded bg-secondary text-white">{{task.parent_task.parent_task}}</td>
+              <td>{{task.priority}}</td>
+              <td>{{task.start_date}}</td>
+              <td>{{task.end_date}}</td>
+              <td><button type="button" class="btn btn-secondary" (click) = "editTask(task.task_id)">Edit Task</button></td>
+              <td><button type="button" class="btn btn-secondary" (click) = "endTask(task.task_id)">End Task</button></td>
+            </tr>
+          </tbody>
+    </div>
+    
   </table>
 </div>
-
