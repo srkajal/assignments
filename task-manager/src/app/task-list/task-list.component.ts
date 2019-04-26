@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 import { Task } from '../model/task.model';
+import { TaskFilter } from '../model/task-filter.model';
 
 @Component({
   selector: 'app-task-list',
@@ -10,6 +11,8 @@ import { Task } from '../model/task.model';
 })
 export class TaskListComponent implements OnInit {
   private taskList: Array<Task> = [];
+  filter: TaskFilter = new TaskFilter();
+  
   constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit() {
@@ -25,16 +28,16 @@ export class TaskListComponent implements OnInit {
   }
 
   endTask(taskId: number){
-    console.log("Task Id:"+taskId);
+    //console.log("Task Id:"+taskId);
     this.apiService.endTask(taskId).subscribe((data: any)=>{this.taskList = this.taskList.filter((a: Task)=>a.task_id!=taskId)});
   }
 
   editTask(taskId: number){
     
-    console.log("TaskId:"+taskId);
+    //console.log("TaskId:"+taskId);
     localStorage.removeItem("editTaskId");
     localStorage.setItem("editTaskId", taskId.toString());
     
-    this.router.navigate(['add-task']);
+    this.router.navigate(['edit-task']);
   }
 }

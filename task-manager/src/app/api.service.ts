@@ -21,6 +21,10 @@ export class ApiService {
     return this.httpClient.post(`${this.API_URL}/api/task/createTask`, taskRequest);
   }
 
+  updateTask(taskRequest: TaskRequest){
+    return this.httpClient.post(`${this.API_URL}/api/task/updateTask`, taskRequest);
+  }
+
   getTaskById(taskId: number){
     return this.httpClient.get(`${this.API_URL}/api/task/findTaskById/`+taskId);
   }
