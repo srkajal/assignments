@@ -2,10 +2,10 @@ package org.kajal.mallick.exception;
 
 import org.springframework.http.HttpStatus;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-public class ErrorResponse {
+class ErrorResponse {
     private HttpStatus status;
     private String message;
     private List<String> errors;
@@ -22,7 +22,7 @@ public class ErrorResponse {
     public ErrorResponse(HttpStatus status, String message, String error) {
         this.status = status;
         this.message = message;
-        this.errors = Arrays.asList(error);
+        this.errors = Collections.singletonList(error);
     }
 
     public HttpStatus getStatus() {

@@ -1,8 +1,10 @@
 package org.kajal.mallick.config;
 
 import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -16,11 +18,13 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories("org.kajal.mallick")
-public class JpaConfig {
+class JpaConfig {
 
+    @Autowired
+    private Environment env;
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(){
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
 
         entityManagerFactoryBean.setDataSource(dataSource());
@@ -32,20 +36,20 @@ public class JpaConfig {
     }
 
     @Bean
-    public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory){
+    public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
         JpaTransactionManager jpaTransactionManager = new JpaTransactionManager();
         jpaTransactionManager.setEntityManagerFactory(entityManagerFactory);
         return jpaTransactionManager;
     }
 
     @Bean
-    public DataSource dataSource(){
+    public DataSource dataSource() {
         HikariDataSource hikariDataSource = new HikariDataSource();
         hikariDataSource.setMaximumPoolSize(100);
         hikariDataSource.setDataSourceClassName("com.mysql.cj.jdbc.MysqlDataSource");
-        hikariDataSource.addDataSourceProperty("url", "jdbc:mysql://localhost:3306/task_manager?useSSL=false");
-        hikariDataSource.addDataSourceProperty("user", "root");
-        hikariDataSource.addDataSourceProperty("password", "admin");
+        hikariDataSource.addDataSourceProperty("url", env.getProperty("spring.datasource.url"));
+        hikariDataSource.addDataSourceProperty("user", env.getProperty("spring.datasource.username"));
+        hikariDataSource.addDataSourceProperty("password", env.getProperty("spring.datasource.password"));
         hikariDataSource.addDataSourceProperty("cachePrepStmts", true);
         hikariDataSource.addDataSourceProperty("prepStmtCacheSize", 250);
         hikariDataSource.addDataSourceProperty("prepStmtCacheSqlLimit", 2048);
@@ -53,13 +57,14 @@ public class JpaConfig {
         return hikariDataSource;
     }
 
-    private final Properties hibernateProperties() {
+    private Properties hibernateProperties() {
         Properties hibernateProperties = new Properties();
         hibernateProperties.setProperty(
-                "hibernate.show_sql", "true");
-        hibernateProperties.setProperty("hibernate.format_sql","true");
+                "hibernate.show_sql", env.getProperty("spring.jpa.show-sql"));
+        hibernateProperties.setProperty("hibernate.format_sql", env.getProperty("spring.jpa.properties.hibernate.format_sql"));
         hibernateProperties.setProperty(
-                "hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+                "hibernate.dialect", env.getProperty("spring.jpa.properties.hibernate.dialect"));
+        hibernateProperties.setProperty("hibernate.current_session_context_class", env.getProperty("spring.jpa.properties.hibernate.current_session_context_class"));
 
         return hibernateProperties;
     }

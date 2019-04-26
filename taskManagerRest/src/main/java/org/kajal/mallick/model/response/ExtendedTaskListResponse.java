@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExtendedTaskListResponse {
+    private List<TaskDto> tasks;
     @JsonProperty("response_detail")
     private BaseResponse baseResponse;
-    List<TaskDto> tasks;
 
     public ExtendedTaskListResponse() {
     }
@@ -23,7 +23,7 @@ public class ExtendedTaskListResponse {
     }
 
     public List<TaskDto> getTasks() {
-        if(tasks == null){
+        if (tasks == null) {
             tasks = new ArrayList<>();
         }
         return tasks;

@@ -1,16 +1,14 @@
 package org.kajal.mallick.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.kajal.mallick.entities.ParentTask;
 import org.kajal.mallick.entities.Task;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 public class TaskDto implements Serializable {
     @JsonProperty("task_id")
     private long taskId;
+    @JsonProperty("task_name")
     private String task;
     @JsonProperty("start_date")
     private String startDate;
@@ -27,7 +25,7 @@ public class TaskDto implements Serializable {
         this.endDate = String.valueOf(task.getEndDate());
         this.priority = task.getPriority();
 
-        if(task.getParentTask() != null){
+        if (task.getParentTask() != null) {
             this.parentTaskDto = new ParentTaskDto(task.getParentTask().getParentId(), task.getParentTask().getParentTask());
         }
 

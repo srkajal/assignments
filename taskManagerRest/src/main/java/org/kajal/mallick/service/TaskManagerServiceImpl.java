@@ -18,7 +18,7 @@ import java.util.List;
 @Service
 public class TaskManagerServiceImpl implements TaskManagerService {
 
-    private TaskManagerFacade taskManagerFacade;
+    private final TaskManagerFacade taskManagerFacade;
 
     @Autowired
     public TaskManagerServiceImpl(TaskManagerFacade taskManagerFacade) {
@@ -51,14 +51,14 @@ public class TaskManagerServiceImpl implements TaskManagerService {
         ExtendedTaskResponse extendedTaskResponse = new ExtendedTaskResponse();
         BaseResponse baseResponse;
 
-        if(taskId <=0){
+        if (taskId <= 0) {
             throw new TaskException("TaskId should not be less than 1");
         }
 
         Task task = taskManagerFacade.findTaskById(taskId);
 
         if (task != null) {
-            extendedTaskResponse.setTask(task);
+            extendedTaskResponse.setTaskDto(new TaskDto(task));
             baseResponse = new BaseResponse(HttpStatus.FOUND.getReasonPhrase(), HttpStatus.FOUND.value(), "Task found for Id:" + taskId);
         } else {
             baseResponse = new BaseResponse(HttpStatus.NOT_FOUND.getReasonPhrase(), HttpStatus.NOT_FOUND.value(), "No Task found for Id:" + taskId);
@@ -84,11 +84,11 @@ public class TaskManagerServiceImpl implements TaskManagerService {
     @Override
     public BaseResponse update(TaskRequest taskRequest) {
 
-        if(taskRequest.getTaskId() <=0){
+        if (taskRequest.getTaskId() <= 0) {
             throw new TaskException("TaskId should not be less than 1");
         }
 
-        Task updateTask = taskManagerFacade.save(taskRequest);
+        Task updateTask = taskManagerFacade.update(taskRequest);
 
         if (updateTask != null) {
             return new BaseResponse(HttpStatus.OK.getReasonPhrase(), HttpStatus.OK.value(), "Task updated successfully");
@@ -99,14 +99,14 @@ public class TaskManagerServiceImpl implements TaskManagerService {
 
     @Override
     public BaseResponse deleteByTaskId(long taskId) {
-        if(taskId <=0){
+        if (taskId <= 0) {
             throw new TaskException("TaskId should not be less than 1");
         }
 
         try {
             taskManagerFacade.deleteByTaskId(taskId);
         } catch (Exception ex) {
-            return new BaseResponse(HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase(), HttpStatus.UNPROCESSABLE_ENTITY.value(), "Uable to delte the task by taskId:" + taskId);
+            return new BaseResponse(HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase(), HttpStatus.UNPROCESSABLE_ENTITY.value(), "Unable to delete the task by taskId:" + taskId);
         }
 
         return new BaseResponse(HttpStatus.OK.getReasonPhrase(), HttpStatus.OK.value(), "Task deleted successfully for taskId: " + taskId);

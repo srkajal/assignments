@@ -1,7 +1,6 @@
 package org.kajal.mallick.model.response;
 
 import com.fasterxml.jackson.annotation.JsonClassDescription;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonClassDescription("response_details")
 public class BaseResponse {

@@ -2,10 +2,8 @@ package org.kajal.mallick.model.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.kajal.mallick.entities.ParentTask;
 
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
@@ -19,6 +17,7 @@ public class TaskRequest {
 
     @NotNull(message = "Task should not be Blank")
     @NotEmpty(message = "Task should not be Blank")
+    @JsonProperty("task_name")
     private String task;
 
     @NotNull(message = "Start date should not be Blank")

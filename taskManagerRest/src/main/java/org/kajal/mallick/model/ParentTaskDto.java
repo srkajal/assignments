@@ -6,7 +6,7 @@ import org.kajal.mallick.entities.ParentTask;
 public class ParentTaskDto {
     @JsonProperty("parent_id")
     private long parentId;
-    @JsonProperty("parent_task")
+    @JsonProperty("parent_task_name")
     private String parentTask;
 
     public ParentTaskDto(ParentTask parentTask) {
@@ -15,8 +15,7 @@ public class ParentTaskDto {
     }
 
 
-
-    public ParentTaskDto(long parentId, String parentTask) {
+    ParentTaskDto(long parentId, String parentTask) {
         this.parentId = parentId;
         this.parentTask = parentTask;
     }

@@ -3,7 +3,6 @@ package org.kajal.mallick.entities;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.Set;
 
 @Entity
 @Table(name = "parent_task")

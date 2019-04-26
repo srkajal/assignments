@@ -13,9 +13,9 @@ import javax.validation.Valid;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/task")
-public class TaskManagerController {
+class TaskManagerController {
 
-    public TaskManagerService taskManagerService;
+    private final TaskManagerService taskManagerService;
 
     @Autowired
     public TaskManagerController(TaskManagerService taskManagerService) {
@@ -23,7 +23,7 @@ public class TaskManagerController {
     }
 
     @GetMapping("/findAllTasks")
-    public ExtendedTaskListResponse findAllTasks() {
+    ExtendedTaskListResponse findAllTasks() {
         return taskManagerService.findAllTasks();
     }
 
@@ -38,12 +38,14 @@ public class TaskManagerController {
     }
 
     @PostMapping("/createTask")
-    public @ResponseBody BaseResponse createTask(@RequestBody @Valid TaskRequest taskRequest) {
+    public @ResponseBody
+    BaseResponse createTask(@RequestBody @Valid TaskRequest taskRequest) {
         return taskManagerService.save(taskRequest);
     }
 
     @PostMapping("/updateTask")
-    public @ResponseBody BaseResponse updateTask(@RequestBody @Valid TaskRequest taskRequest) {
+    public @ResponseBody
+    BaseResponse updateTask(@RequestBody @Valid TaskRequest taskRequest) {
         return taskManagerService.update(taskRequest);
     }
 }

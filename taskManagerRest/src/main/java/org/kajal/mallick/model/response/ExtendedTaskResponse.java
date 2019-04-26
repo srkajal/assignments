@@ -1,19 +1,20 @@
 package org.kajal.mallick.model.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.kajal.mallick.entities.Task;
+import org.kajal.mallick.model.TaskDto;
 
 public class ExtendedTaskResponse {
-    private Task task;
+    @JsonProperty("task")
+    private TaskDto taskDto;
     @JsonProperty("response_detail")
     private BaseResponse baseResponse;
 
-    public Task getTask() {
-        return task;
+    public TaskDto getTaskDto() {
+        return taskDto;
     }
 
-    public void setTask(Task task) {
-        this.task = task;
+    public void setTaskDto(TaskDto taskDto) {
+        this.taskDto = taskDto;
     }
 
     public BaseResponse getBaseResponse() {

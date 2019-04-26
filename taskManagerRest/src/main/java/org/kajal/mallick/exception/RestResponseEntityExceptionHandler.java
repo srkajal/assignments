@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ControllerAdvice
-public class RestResponseEntityExceptionHandler
+class RestResponseEntityExceptionHandler
         extends ResponseEntityExceptionHandler {
 
     @Override
@@ -28,7 +28,7 @@ public class RestResponseEntityExceptionHandler
             HttpHeaders headers,
             HttpStatus status,
             WebRequest request) {
-        List<String> errors = new ArrayList<String>();
+        List<String> errors = new ArrayList<>();
         for (FieldError error : ex.getBindingResult().getFieldErrors()) {
             errors.add(error.getField() + ": " + error.getDefaultMessage());
         }
@@ -52,14 +52,14 @@ public class RestResponseEntityExceptionHandler
 
         ErrorResponse errorResponse =
                 new ErrorResponse(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), error);
-        return new ResponseEntity<Object>(
+        return new ResponseEntity<>(
                 errorResponse, new HttpHeaders(), errorResponse.getStatus());
     }
 
-    @ExceptionHandler({ ConstraintViolationException.class })
+    @ExceptionHandler({ConstraintViolationException.class})
     public ResponseEntity<Object> handleConstraintViolation(
             ConstraintViolationException ex, WebRequest request) {
-        List<String> errors = new ArrayList<String>();
+        List<String> errors = new ArrayList<>();
         for (ConstraintViolation<?> violation : ex.getConstraintViolations()) {
             errors.add(violation.getRootBeanClass().getName() + " " +
                     violation.getPropertyPath() + ": " + violation.getMessage());
@@ -67,24 +67,31 @@ public class RestResponseEntityExceptionHandler
 
         ErrorResponse errorResponse =
                 new ErrorResponse(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), errors);
-        return new ResponseEntity<Object>(
+        return new ResponseEntity<>(
                 errorResponse, new HttpHeaders(), errorResponse.getStatus());
     }
 
-    @ExceptionHandler({ MethodArgumentTypeMismatchException.class })
+    @ExceptionHandler({MethodArgumentTypeMismatchException.class})
     public ResponseEntity<Object> handleMethodArgumentTypeMismatch(
             MethodArgumentTypeMismatchException ex, WebRequest request) {
-        String error =
-                ex.getName() + " should be of type " + ex.getRequiredType().getName();
+        String error;
+        if (ex.getRequiredType() != null) {
+            error =
+                    ex.getName() + " should be of type " + ex.getRequiredType().getName();
+        } else {
+            error =
+                    ex.getName() + " should be of type " + ex.getRequiredType();
+        }
+
 
         ErrorResponse errorResponse =
                 new ErrorResponse(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), error);
-        return new ResponseEntity<Object>(
+        return new ResponseEntity<>(
                 errorResponse, new HttpHeaders(), errorResponse.getStatus());
     }
 
     @ExceptionHandler(value
-            = { IllegalArgumentException.class, IllegalStateException.class })
+            = {IllegalArgumentException.class, IllegalStateException.class})
     protected ResponseEntity<Object> handleConflict(
             RuntimeException ex, WebRequest request) {
         String bodyOfResponse = "This should be application specific";
@@ -94,13 +101,13 @@ public class RestResponseEntityExceptionHandler
 
     @ExceptionHandler(TaskException.class)
     public ResponseEntity<ErrorResponse> exceptionHandler(RuntimeException ex) {
-        ErrorResponse error = new ErrorResponse(HttpStatus.PRECONDITION_FAILED, ex.getMessage(),"Error occurred");
-        return new ResponseEntity<ErrorResponse>(error, HttpStatus.OK);
+        ErrorResponse error = new ErrorResponse(HttpStatus.PRECONDITION_FAILED, ex.getMessage(), "Error occurred");
+        return new ResponseEntity<>(error, HttpStatus.OK);
     }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> exceptionHandler(Exception ex) {
-        ErrorResponse error = new ErrorResponse(HttpStatus.PRECONDITION_FAILED, ex.getMessage(),"Error occurred");
-        return new ResponseEntity<ErrorResponse>(error, HttpStatus.OK);
+        ErrorResponse error = new ErrorResponse(HttpStatus.PRECONDITION_FAILED, ex.getMessage(), "Error occurred");
+        return new ResponseEntity<>(error, HttpStatus.OK);
     }
 }

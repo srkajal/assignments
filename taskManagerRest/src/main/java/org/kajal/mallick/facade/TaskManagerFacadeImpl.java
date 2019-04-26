@@ -11,7 +11,7 @@ import java.util.List;
 
 @Component
 public class TaskManagerFacadeImpl implements TaskManagerFacade {
-    private TaskManagerDao taskManagerDao;
+    private final TaskManagerDao taskManagerDao;
 
     @Autowired
     public TaskManagerFacadeImpl(TaskManagerDao taskManagerDao) {
