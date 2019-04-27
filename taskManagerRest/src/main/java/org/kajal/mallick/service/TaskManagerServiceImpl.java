@@ -20,9 +20,8 @@ import java.util.List;
 @Service
 public class TaskManagerServiceImpl implements TaskManagerService {
 
-    private Logger logger = LoggerFactory.getLogger(TaskManagerServiceImpl.class);
-
     private final TaskManagerFacade taskManagerFacade;
+    private Logger logger = LoggerFactory.getLogger(TaskManagerServiceImpl.class);
 
     @Autowired
     public TaskManagerServiceImpl(TaskManagerFacade taskManagerFacade) {
