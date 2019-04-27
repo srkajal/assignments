@@ -37,6 +37,11 @@ class TaskManagerController {
         return taskManagerService.deleteByTaskId(taskId);
     }
 
+    @GetMapping("/closeTaskById/{taskId}")
+    public BaseResponse closeTaskById(@PathVariable("taskId") long taskId) {
+        return taskManagerService.closeTaskById(taskId);
+    }
+
     @PostMapping("/createTask")
     public @ResponseBody
     BaseResponse createTask(@RequestBody @Valid TaskRequest taskRequest) {

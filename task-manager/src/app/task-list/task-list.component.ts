@@ -10,7 +10,7 @@ import { TaskFilter } from '../model/task-filter.model';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  private taskList: Array<Task> = [];
+  taskList: Array<Task> = [];
   filter: TaskFilter = new TaskFilter();
   
   constructor(private apiService: ApiService, private router: Router) { }
@@ -23,18 +23,22 @@ export class TaskListComponent implements OnInit {
     this.apiService.getAllTasks().subscribe((data: any)=>
     {
       this.taskList = data.tasks;
-      //console.log(data);
     });
   }
 
   endTask(taskId: number){
-    //console.log("Task Id:"+taskId);
-    this.apiService.endTask(taskId).subscribe((data: any)=>{this.taskList = this.taskList.filter((a: Task)=>a.task_id!=taskId)});
+    this.apiService
+    .endTask(taskId)
+    .subscribe((data: any)=>{
+      this.taskList.forEach((t:Task)=>{
+      if(t.task_id == taskId){
+        t.status = 'CLOSED';
+      }
+    })
+  });
   }
 
   editTask(taskId: number){
-    
-    //console.log("TaskId:"+taskId);
     localStorage.removeItem("editTaskId");
     localStorage.setItem("editTaskId", taskId.toString());
     

@@ -13,4 +13,6 @@ public interface TaskManagerDao {
     Task save(Task task);
 
     void deleteByTaskId(long taskId);
+
+    int updateTaskStatus(String status, long taskId);
 }

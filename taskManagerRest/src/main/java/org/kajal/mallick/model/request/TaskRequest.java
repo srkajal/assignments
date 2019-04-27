@@ -18,7 +18,7 @@ public class TaskRequest {
     @NotNull(message = "Task should not be Blank")
     @NotEmpty(message = "Task should not be Blank")
     @JsonProperty("task_name")
-    private String task;
+    private String taskName;
 
     @NotNull(message = "Start date should not be Blank")
     @JsonProperty("start_date")
@@ -49,12 +49,12 @@ public class TaskRequest {
         this.parentId = parentId;
     }
 
-    public String getTask() {
-        return task;
+    public String getTaskName() {
+        return taskName;
     }
 
-    public void setTask(String task) {
-        this.task = task;
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
     }
 
     public LocalDate getStartDate() {

@@ -14,7 +14,7 @@ export class ApiService {
   }
 
   endTask(taskId: number){
-    return this.httpClient.get(`${this.API_URL}/api/task/deleteTaskById/`+taskId);
+    return this.httpClient.get(`${this.API_URL}/api/task/closeTaskById/`+taskId);
   }
 
   addTask(taskRequest: TaskRequest){

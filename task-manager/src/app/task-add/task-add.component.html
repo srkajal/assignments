@@ -2,7 +2,7 @@
   <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
     <div class="row">
       <div class="col-md-2">
-        <label for="taskName" class="mb-2 mr-sm-1">Task:</label>
+        <label for="taskName" class="mb-2 mr-sm-1" i18n="@@taskName3">Task:</label>
       </div>
       <div class="col-md-6">
         <input type="text" formControlName="task_name" class="form-control mb-2 mr-sm-2" id="taskName" placeholder="Enter task" name="taskName">
@@ -25,7 +25,7 @@
 
     <div class="row">
       <div class="col-md-2">
-        <label for="priority">Priority</label>
+        <label for="priority" i18n="@@priority3">Priority</label>
       </div>
       <div class="col-md-6">
         <input type="range" formControlName="priority" class="custom-range" id="priority" name="priority" min="1" max="30"
@@ -36,7 +36,7 @@
 
     <div class="row">
       <div class="col-md-2">
-        <label for="parent_id" class="mb-2 mr-sm-1">Parent Task:</label>
+        <label for="parent_id" class="mb-2 mr-sm-1" i18n="@@parentTask3">Parent Task:</label>
       </div>
       <div class="col-md-6">
         <input type="number" formControlName="parent_id" class="form-control mb-2 mr-sm-2" id="parent_id" placeholder="Enter Parent task"
@@ -47,7 +47,7 @@
 
     <div class="row">
       <div class="col-md-2">
-        <label for="start_date" class="mb-2 mr-sm-1">Start Date:</label>
+        <label for="start_date" class="mb-2 mr-sm-1" i18n="@@startDate3">Start Date:</label>
       </div>
       <div class="col-md-6">
         <input type="date" formControlName="start_date" class="form-control mb-2 mr-sm-2" id="start_date" placeholder="Enter Start Date"
@@ -58,7 +58,7 @@
 
     <div class="row">
       <div class="col-md-2">
-        <label for="end_date" class="mb-2 mr-sm-1">End Date:</label>
+        <label for="end_date" class="mb-2 mr-sm-1" i18n="@@endDate3">End Date:</label>
       </div>
       <div class="col-md-6">
         <input type="date" formControlName="end_date" class="form-control mb-2 mr-sm-2" id="end_date" placeholder="Enter End Date"
@@ -70,10 +70,10 @@
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-2">
-        <button type="submit" class="btn btn-secondary">Add Task</button>
+        <button type="submit" class="btn btn-secondary" i18n="@@addTask">Add Task</button>
       </div>
       <div class="col-md-2">
-        <button type="button" (click) = "resetTask()"class="btn btn-secondary">Reset</button>
+        <button type="button" (click) = "resetTask()"class="btn btn-secondary" i18n="@@rest">Reset</button>
       </div>
       <div class="col-md-6"></div>
     </div>

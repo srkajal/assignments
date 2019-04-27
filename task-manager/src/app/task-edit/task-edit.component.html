@@ -3,7 +3,7 @@
     <input type="hidden" formControlName="task_id" id="task_id" value="" name="task_id">
     <div class="row">
       <div class="col-md-2">
-        <label for="taskName" class="mb-2 mr-sm-1">Task:</label>
+        <label for="taskName" class="mb-2 mr-sm-1" i18n="@@taskName4">Task:</label>
       </div>
       <div class="col-md-6">
         <input type="text" formControlName="task_name" class="form-control mb-2 mr-sm-2" id="taskName" placeholder="Enter task" name="taskName">
@@ -26,7 +26,7 @@
 
     <div class="row">
       <div class="col-md-2">
-        <label for="priority">Priority</label>
+        <label for="priority" i18n="@@priority4">Priority</label>
       </div>
       <div class="col-md-6">
         <input type="range" formControlName="priority" class="custom-range" id="priority" name="priority" min="1" max="30"
@@ -37,7 +37,7 @@
 
     <div class="row">
       <div class="col-md-2">
-        <label for="parent_id" class="mb-2 mr-sm-1">Parent Task:</label>
+        <label for="parent_id" class="mb-2 mr-sm-1" i18n="@@parentTask4">Parent Task:</label>
       </div>
       <div class="col-md-6">
         <input type="number" formControlName="parent_id" class="form-control mb-2 mr-sm-2" id="parent_id" placeholder="Enter Parent task"
@@ -48,7 +48,7 @@
 
     <div class="row">
       <div class="col-md-2">
-        <label for="start_date" class="mb-2 mr-sm-1">Start Date:</label>
+        <label for="start_date" class="mb-2 mr-sm-1" i18n="@@startDate4">Start Date:</label>
       </div>
       <div class="col-md-6">
         <input type="date" formControlName="start_date" class="form-control mb-2 mr-sm-2" id="start_date" placeholder="Enter Start Date"
@@ -59,7 +59,7 @@
 
     <div class="row">
       <div class="col-md-2">
-        <label for="end_date" class="mb-2 mr-sm-1">End Date:</label>
+        <label for="end_date" class="mb-2 mr-sm-1" i18n="@@endDate4">End Date:</label>
       </div>
       <div class="col-md-6">
         <input type="date" formControlName="end_date" class="form-control mb-2 mr-sm-2" id="end_date" placeholder="Enter End Date"
@@ -71,10 +71,10 @@
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-2">
-        <button class="btn btn-secondary">Update Task</button>
+        <button class="btn btn-secondary" i18n="@@updateTask">Update Task</button>
       </div>
       <div class="col-md-2">
-        <button type="button" (click) = "cancel()" class="btn btn-secondary">Cancel</button>
+        <button type="button" (click) = "cancel()" class="btn btn-secondary" i18n="@@cancel">Cancel</button>
       </div>
       <div class="col-md-6"></div>
     </div>

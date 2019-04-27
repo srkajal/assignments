@@ -38,4 +38,9 @@ public class TaskManagerDaoImpl implements TaskManagerDao {
     public void deleteByTaskId(long taskId) {
         taskManagerRepository.deleteById(taskId);
     }
+
+    @Override
+    public int updateTaskStatus(String status, long taskId) {
+        return taskManagerRepository.updateTaskStatus(status, taskId);
+    }
 }

@@ -11,7 +11,7 @@ public class ParentTaskDto {
 
     public ParentTaskDto(ParentTask parentTask) {
         this.parentId = parentTask.getParentId();
-        this.parentTask = parentTask.getParentTask();
+        this.parentTask = parentTask.getParentTaskName();
     }
 
 

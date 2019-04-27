@@ -6,6 +6,16 @@ import { Task } from '../model/task.model';
     pure: false
 })
 export class TaskFilterPipe implements PipeTransform {
+    STRING_TYPE = 'string';
+    NUMBER_TYPE = 'number';
+    OBJECT_TYPE = 'object';
+    FIELD_START_DATE = 'start_date';
+    FIELD_END_DATE = 'end_date';
+    FIELD_TASK_NAME = 'task_name';
+    FIELD_PRIORITY_FROM = 'priority_from';
+    FIELD_PRIORITY_TO = 'priority_to';
+    FIELD_PRIORITY = 'priority';
+
     transform(tasks: Task[], filter: Task) {
         //console.log("Inside the filter:"+filter.task_name);
         if(!tasks || !filter){
@@ -22,32 +32,32 @@ export class TaskFilterPipe implements PipeTransform {
             //console.log("Field:"+filter[field]);
             if(filter[field]){
                 //console.log("Task type:"+ typeof task[field] +",Filter type:"+ typeof filter[field]+",Field name:"+ field);
-                if(typeof filter[field] === 'string' && typeof task[field] === 'string'){
-                    if(field === 'start_date'){
+                if(typeof filter[field] === this.STRING_TYPE && typeof task[field] === this.STRING_TYPE){
+                    if(field === this.FIELD_START_DATE){
                         return new Date(filter[field]) <= new Date(task[field]);
                     } 
                     
-                    if(field === 'end_date'){
-                        return new Date(filter[field]) >= new Date(task[field]);
+                    if(field === this.FIELD_END_DATE){
+                        return new Date(filter[field]) <= new Date(task[field]);
                     } 
                     
-                    if(field === 'task_name') {
+                    if(field === this.FIELD_TASK_NAME) {
                         return task[field].toLowerCase().indexOf(filter[field].toLowerCase()) !== -1;
                     }
                 } 
                 
-                if(typeof filter[field] === 'string' && typeof task[field] === 'object'){
+                if(typeof filter[field] === this.STRING_TYPE && typeof task[field] === this.OBJECT_TYPE){
                     return task[field].parent_task_name.toLowerCase().indexOf(filter[field].toLowerCase()) !== -1;
                 }
                 
-                if(typeof filter[field] === 'number'){
+                if(typeof filter[field] === this.NUMBER_TYPE){
 
-                    if(field === 'priority_from'){
-                        return task['priority'] >= filter[field];
+                    if(field === this.FIELD_PRIORITY_FROM){
+                        return task[this.FIELD_PRIORITY] >= filter[field];
                     }
 
-                    if(field === 'priority_to'){
-                        return task['priority'] <= filter[field];
+                    if(field === this.FIELD_PRIORITY_TO){
+                        return task[this.FIELD_PRIORITY] <= filter[field];
                     }
                 }
             }

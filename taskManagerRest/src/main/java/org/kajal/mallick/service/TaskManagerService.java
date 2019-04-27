@@ -16,4 +16,6 @@ public interface TaskManagerService {
     BaseResponse update(TaskRequest taskRequest);
 
     BaseResponse deleteByTaskId(long taskId);
+
+    BaseResponse closeTaskById(long taskId);
 }

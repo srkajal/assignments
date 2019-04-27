@@ -15,4 +15,6 @@ public interface TaskManagerFacade {
     Task update(TaskRequest taskRequest);
 
     void deleteByTaskId(long taskId);
+
+    int closeTaskById(long taskId);
 }

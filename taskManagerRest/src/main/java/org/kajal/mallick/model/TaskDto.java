@@ -15,18 +15,21 @@ public class TaskDto implements Serializable {
     @JsonProperty("end_date")
     private String endDate;
     private int priority;
+    private String status;
     @JsonProperty("parent_task")
     private ParentTaskDto parentTaskDto;
 
+
     public TaskDto(Task task) {
         this.taskId = task.getTaskId();
-        this.task = task.getTask();
+        this.task = task.getTaskName();
         this.startDate = String.valueOf(task.getStartDate());
         this.endDate = String.valueOf(task.getEndDate());
         this.priority = task.getPriority();
+        this.status = task.getStatus();
 
         if (task.getParentTask() != null) {
-            this.parentTaskDto = new ParentTaskDto(task.getParentTask().getParentId(), task.getParentTask().getParentTask());
+            this.parentTaskDto = new ParentTaskDto(task.getParentTask().getParentId(), task.getParentTask().getParentTaskName());
         }
 
     }
@@ -80,5 +83,13 @@ public class TaskDto implements Serializable {
 
     public void setPriority(int priority) {
         this.priority = priority;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

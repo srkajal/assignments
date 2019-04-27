@@ -1,28 +1,28 @@
 <div class="container">
-  <h2>Task Manager</h2>
+  <h2 i18n="@@taskManager">Task Manager</h2>
 
   <form>
     <div class="row">
       <div class="col-md-2">
-        <label for="task_name" class="mb-2 mr-sm-2">Task:</label>
+        <label for="taskName" class="mb-2 mr-sm-2" i18n="@@taskName">Task:</label>
       </div>
       <div class="col-md-4">
-        <input type="text" [(ngModel)]="filter.task_name" class="form-control mb-2 mr-sm-2" id="task_name" placeholder="Enter task"
+        <input type="text" [(ngModel)]="filter.task_name" class="form-control mb-2 mr-sm-2" id="taskName" placeholder="Enter task"
           name="taskName">
       </div>
       <div class="col-md-2">
-        <label for="parentTask" class="mb-2 mr-sm-2">Parent Task:</label>
+        <label for="parentTaskName" class="mb-2 mr-sm-2" i18n="@@parentTaskName">Parent Task:</label>
       </div>
       <div class="col-md-4">
-        <input type="text" [(ngModel)]="filter.parent_task" class="form-control mb-2 mr-sm-1" id="parentTask" placeholder="Enter parent task"
-          name="parentTask">
+        <input type="text" [(ngModel)]="filter.parent_task" class="form-control mb-2 mr-sm-1" id="parentTaskName" placeholder="Enter parent task"
+          name="parentTaskName">
       </div>
     </div>
     <div class="row">
       <div class="col-md-2">
         <div class="row">
           <div class="col-md-6">
-            <label for="prirotyFrom" class="mb-2 mr-sm-1">Priroty From:</label>
+            <label for="prirotyFrom" class="mb-2 mr-sm-1" i18n="@@prirotyFrom">Priroty From:</label>
           </div>
           <div class="col-md-6">
             <input type="number" [(ngModel)]="filter.priority_from" class="form-control mb-2 mr-sm-1" id="prirotyFrom" name="prirotyFrom">
@@ -33,7 +33,7 @@
       <div class="col-md-2">
         <div class="row">
           <div class="col-md-6">
-            <label for="prirotyTo" class="mb-2 mr-sm-1">Priority To:</label>
+            <label for="prirotyTo" class="mb-2 mr-sm-1" i18n="@@prirotyTo">Priority To:</label>
           </div>
           <div class="col-md-6">
             <input type="number" [(ngModel)]="filter.priority_to" class="form-control mb-2 mr-sm-1" id="prirotyTo" name="prirotyTo">
@@ -44,7 +44,7 @@
       <div class="col-md-4">
         <div class="row">
           <div class="col-md-4">
-            <label for="startDate" class="mb-2 mr-sm-2">Start Date:</label>
+            <label for="startDate" class="mb-2 mr-sm-2" i18n="@@startDate">Start Date:</label>
           </div>
           <div class="col-md-8">
             <input type="date" [(ngModel)]="filter.start_date" class="form-control mb-2 mr-sm-2" id="startDate" placeholder="Enter date"
@@ -56,7 +56,7 @@
       <div class="col-md-4">
         <div class="row">
           <div class="col-md-4">
-            <label for="endDate" class="mb-2 mr-sm-2">End Date:</label>
+            <label for="endDate" class="mb-2 mr-sm-2" i18n="@@endDate">End Date:</label>
           </div>
           <div class="col-md-8">
             <input type="date" [(ngModel)]="filter.end_date" class="form-control mb-2 mr-sm-2" id="endDate" placeholder="Enter date"
@@ -69,43 +69,61 @@
 
     <div class="row">
       <div class="col">
-        <hr>
+          <span layout="row"><hr flex/><hr flex/></span>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col">
-        <table class="table table-borderless">
-          <div *ngFor="let task of taskList | taskFilter: filter">
-            <thead>
-              <tr>
-                <th>Task</th>
-                <th>Parent</th>
-                <th>Priority</th>
-                <th>Start</th>
-                <th>End</th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="rounded bg-secondary text-white">{{task.task_name}}</td>
-                <td class="rounded bg-secondary text-white">{{task.parent_task.parent_task_name}}</td>
-                <td>{{task.priority}}</td>
-                <td>{{task.start_date | date: 'MMM d, y'}}</td>
-                <td>{{task.end_date | date: 'MMM d, y'}}</td>
-                <td>
-                  <button type="button" class="btn btn-secondary" (click)="editTask(task.task_id)">Edit Task</button>
-                </td>
-                <td>
-                  <button type="button" class="btn btn-secondary" (click)="endTask(task.task_id)">End Task</button>
-                </td>
-              </tr>
-            </tbody>
-          </div>
+    <div *ngFor="let task of taskList | taskFilter: filter">
+      <div class="row">
+        <div class="col-md-3">
+          <h6 i18n="@@taskName2">Task</h6>
+        </div>
+        <div class="col-md-2">
+          <h6 i18n="@@parentTaskName2">Parent</h6>
+        </div>
+        <div class="col-md-1">
+          <h6 i18n="@@priority2">Priority</h6>
+        </div>
+        <div class="col-md-2">
+          <h6 i18n="@@start">Start</h6>
+        </div>
+        <div class="col-md-2">
+          <h6 i18n="@@end">End</h6>
+        </div>
+        <div class="col-md-1">
+          <h6></h6>
+        </div>
+        <div class="col-md-1">
+          <h6></h6>
+        </div>
+      </div>
 
-        </table>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="rounded bg-secondary text-white">{{task.task_name}}</div>
+        </div>
+        <div class="col-md-2">
+          <div class="rounded bg-secondary text-white">{{task.parent_task.parent_task_name}}</div>
+        </div>
+        <div class="col-md-1">
+          {{task.priority}}
+        </div>
+        <div class="col-md-2">
+          {{task.start_date | date: 'MMM d, y'}}
+        </div>
+        <div class="col-md-2">
+          {{task.end_date | date: 'MMM d, y'}}
+        </div>
+        <div class="col-md-1">
+          <div *ngIf="task.status=='OPEN'">
+            <button type="button" class="btn btn-secondary" (click)="editTask(task.task_id)">Edit</button>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div *ngIf="task.status=='OPEN'">
+            <button type="button" class="btn btn-secondary" (click)="endTask(task.task_id)">End</button>
+          </div>
+        </div>
       </div>
     </div>
   </form>

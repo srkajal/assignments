@@ -11,29 +11,32 @@ public class Task implements Serializable {
 
     private long taskId;
     private ParentTask parentTask;
-    private String task;
+    private String taskName;
     private LocalDate startDate;
     private LocalDate endDate;
     private int priority;
+    private String status;
 
     public Task() {
     }
 
-    public Task(String task, LocalDate startDate, LocalDate endDate, int priority, ParentTask parentTask) {
-        this.task = task;
+    public Task(ParentTask parentTask, String taskName, LocalDate startDate, LocalDate endDate, int priority, String status) {
+        this.parentTask = parentTask;
+        this.taskName = taskName;
         this.startDate = startDate;
         this.endDate = endDate;
         this.priority = priority;
-        this.parentTask = parentTask;
+        this.status = status;
     }
 
-    public Task(long taskId, String task, LocalDate startDate, LocalDate endDate, int priority, ParentTask parentTask) {
+    public Task(long taskId, ParentTask parentTask, String taskName, LocalDate startDate, LocalDate endDate, int priority, String status) {
         this.taskId = taskId;
         this.parentTask = parentTask;
-        this.task = task;
+        this.taskName = taskName;
         this.startDate = startDate;
         this.endDate = endDate;
         this.priority = priority;
+        this.status = status;
     }
 
     @Id
@@ -57,12 +60,13 @@ public class Task implements Serializable {
         this.parentTask = parentTask;
     }
 
-    public String getTask() {
-        return task;
+    @Column(name = "task_name")
+    public String getTaskName() {
+        return taskName;
     }
 
-    public void setTask(String task) {
-        this.task = task;
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
     }
 
     @Column(name = "start_date")
@@ -91,31 +95,43 @@ public class Task implements Serializable {
         this.priority = priority;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Task task1 = (Task) o;
-        return taskId == task1.taskId &&
-                priority == task1.priority &&
-                task.equals(task1.task) &&
-                startDate.equals(task1.startDate) &&
-                endDate.equals(task1.endDate);
+        Task task = (Task) o;
+        return taskId == task.taskId &&
+                priority == task.priority &&
+                parentTask.equals(task.parentTask) &&
+                taskName.equals(task.taskName) &&
+                startDate.equals(task.startDate) &&
+                endDate.equals(task.endDate) &&
+                status.equals(task.status);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(taskId, task, startDate, endDate, priority);
+        return Objects.hash(taskId, parentTask, taskName, startDate, endDate, priority, status);
     }
 
     @Override
     public String toString() {
         return "Task{" +
                 "taskId=" + taskId +
-                ", task='" + task + '\'' +
+                ", parentTask=" + parentTask +
+                ", taskName='" + taskName + '\'' +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 ", priority=" + priority +
+                ", status='" + status + '\'' +
                 '}';
     }
 }

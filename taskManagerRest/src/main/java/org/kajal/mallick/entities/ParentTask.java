@@ -8,7 +8,7 @@ import java.util.Objects;
 @Table(name = "parent_task")
 public class ParentTask implements Serializable {
     private long parentId;
-    private String parentTask;
+    private String parentTaskName;
 
     public ParentTask() {
     }
@@ -17,8 +17,8 @@ public class ParentTask implements Serializable {
         this.parentId = parentId;
     }
 
-    public ParentTask(String parentTask) {
-        this.parentTask = parentTask;
+    public ParentTask(String parentTaskName) {
+        this.parentTaskName = parentTaskName;
     }
 
     @Id
@@ -32,13 +32,13 @@ public class ParentTask implements Serializable {
         this.parentId = parentId;
     }
 
-    @Column(name = "parent_task")
-    public String getParentTask() {
-        return parentTask;
+    @Column(name = "parent_task_name")
+    public String getParentTaskName() {
+        return parentTaskName;
     }
 
-    public void setParentTask(String parentTask) {
-        this.parentTask = parentTask;
+    public void setParentTaskName(String parentTaskName) {
+        this.parentTaskName = parentTaskName;
     }
 
     @Override
@@ -47,19 +47,19 @@ public class ParentTask implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
         ParentTask that = (ParentTask) o;
         return parentId == that.parentId &&
-                parentTask.equals(that.parentTask);
+                parentTaskName.equals(that.parentTaskName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(parentId, parentTask);
+        return Objects.hash(parentId, parentTaskName);
     }
 
     @Override
     public String toString() {
         return "ParentTask{" +
                 "parentId=" + parentId +
-                ", parentTask='" + parentTask + '\'' +
+                ", parentTask='" + parentTaskName + '\'' +
                 '}';
     }
 }
