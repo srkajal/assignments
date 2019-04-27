@@ -20,7 +20,7 @@ import java.util.List;
 @Service
 public class TaskManagerServiceImpl implements TaskManagerService {
 
-    Logger logger = LoggerFactory.getLogger(TaskManagerServiceImpl.class);
+    private Logger logger = LoggerFactory.getLogger(TaskManagerServiceImpl.class);
 
     private final TaskManagerFacade taskManagerFacade;
 
@@ -142,7 +142,7 @@ public class TaskManagerServiceImpl implements TaskManagerService {
             rowUpdated = 0;
             logger.error("Unable to closed the Task", ex);
         }
-        if(rowUpdated <=0){
+        if (rowUpdated <= 0) {
 
             return new BaseResponse(HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase(), HttpStatus.UNPROCESSABLE_ENTITY.value(), "Unable to close the task by taskId:" + taskId);
         }
