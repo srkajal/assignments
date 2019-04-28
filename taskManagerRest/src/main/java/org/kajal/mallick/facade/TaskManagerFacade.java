@@ -1,6 +1,8 @@
 package org.kajal.mallick.facade;
 
+import org.kajal.mallick.entities.ParentTask;
 import org.kajal.mallick.entities.Task;
+import org.kajal.mallick.model.request.ParentTaskRequest;
 import org.kajal.mallick.model.request.TaskRequest;
 
 import java.util.List;
@@ -10,11 +12,13 @@ public interface TaskManagerFacade {
 
     Task findTaskById(long taskId);
 
-    Task save(TaskRequest taskRequest);
+    Task saveTask(TaskRequest taskRequest);
 
     Task update(TaskRequest taskRequest);
 
-    void deleteByTaskId(long taskId);
-
     int closeTaskById(long taskId);
+
+    List<ParentTask> findAllParentTasks();
+
+    ParentTask saveParentTask(ParentTaskRequest parentTaskRequest);
 }

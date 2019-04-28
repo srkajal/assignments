@@ -15,7 +15,7 @@ public class ParentTaskDto {
     }
 
 
-    ParentTaskDto(long parentId, String parentTask) {
+    public ParentTaskDto(long parentId, String parentTask) {
         this.parentId = parentId;
         this.parentTask = parentTask;
     }

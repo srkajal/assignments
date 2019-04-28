@@ -18,8 +18,6 @@ public interface TaskManagerRepository extends Repository<Task, Long> {
 
     Task save(Task task);
 
-    void deleteById(long id);
-
     @Modifying
     @Query(UPDATE_TASK_STATUS)
     int updateTaskStatus(@Param("status") String status, @Param("taskId") long taskId);

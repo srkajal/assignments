@@ -1,7 +1,9 @@
 package org.kajal.mallick.controller;
 
+import org.kajal.mallick.model.request.ParentTaskRequest;
 import org.kajal.mallick.model.request.TaskRequest;
 import org.kajal.mallick.model.response.BaseResponse;
+import org.kajal.mallick.model.response.ExtendedParentTaskListResponse;
 import org.kajal.mallick.model.response.ExtendedTaskListResponse;
 import org.kajal.mallick.model.response.ExtendedTaskResponse;
 import org.kajal.mallick.service.TaskManagerService;
@@ -21,19 +23,19 @@ class TaskManagerController {
         this.taskManagerService = taskManagerService;
     }
 
-    @GetMapping("/findAllTasks")
+    @GetMapping(value = "/findAllTasks")
     ExtendedTaskListResponse findAllTasks() {
         return taskManagerService.findAllTasks();
+    }
+
+    @GetMapping("/findAllParentTasks")
+    ExtendedParentTaskListResponse findAllParentTasks() {
+        return taskManagerService.findAllParentTasks();
     }
 
     @GetMapping("/findTaskById/{taskId}")
     public ExtendedTaskResponse findTaskById(@PathVariable("taskId") long taskId) {
         return taskManagerService.findTaskById(taskId);
-    }
-
-    @GetMapping("/deleteTaskById/{taskId}")
-    public BaseResponse deleteTaskById(@PathVariable("taskId") long taskId) {
-        return taskManagerService.deleteByTaskId(taskId);
     }
 
     @GetMapping("/closeTaskById/{taskId}")
@@ -44,7 +46,13 @@ class TaskManagerController {
     @PostMapping("/createTask")
     public @ResponseBody
     BaseResponse createTask(@RequestBody @Valid TaskRequest taskRequest) {
-        return taskManagerService.save(taskRequest);
+        return taskManagerService.saveTask(taskRequest);
+    }
+
+    @PostMapping("/createParentTask")
+    public @ResponseBody
+    BaseResponse createParentTask(@RequestBody @Valid ParentTaskRequest parentTaskRequest) {
+        return taskManagerService.saveParentTask(parentTaskRequest);
     }
 
     @PostMapping("/updateTask")

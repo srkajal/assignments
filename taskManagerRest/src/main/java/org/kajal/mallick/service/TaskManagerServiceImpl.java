@@ -1,11 +1,15 @@
 package org.kajal.mallick.service;
 
+import org.kajal.mallick.entities.ParentTask;
 import org.kajal.mallick.entities.Task;
 import org.kajal.mallick.exception.TaskException;
 import org.kajal.mallick.facade.TaskManagerFacade;
+import org.kajal.mallick.model.ParentTaskDto;
 import org.kajal.mallick.model.TaskDto;
+import org.kajal.mallick.model.request.ParentTaskRequest;
 import org.kajal.mallick.model.request.TaskRequest;
 import org.kajal.mallick.model.response.BaseResponse;
+import org.kajal.mallick.model.response.ExtendedParentTaskListResponse;
 import org.kajal.mallick.model.response.ExtendedTaskListResponse;
 import org.kajal.mallick.model.response.ExtendedTaskResponse;
 import org.slf4j.Logger;
@@ -19,9 +23,9 @@ import java.util.List;
 
 @Service
 public class TaskManagerServiceImpl implements TaskManagerService {
-
-    private final TaskManagerFacade taskManagerFacade;
     private Logger logger = LoggerFactory.getLogger(TaskManagerServiceImpl.class);
+
+    private TaskManagerFacade taskManagerFacade;
 
     @Autowired
     public TaskManagerServiceImpl(TaskManagerFacade taskManagerFacade) {
@@ -78,9 +82,9 @@ public class TaskManagerServiceImpl implements TaskManagerService {
     }
 
     @Override
-    public BaseResponse save(TaskRequest taskRequest) {
+    public BaseResponse saveTask(TaskRequest taskRequest) {
 
-        Task savedTask = taskManagerFacade.save(taskRequest);
+        Task savedTask = taskManagerFacade.saveTask(taskRequest);
 
         if (savedTask != null) {
             logger.info("Task saved successfully :{}", taskRequest.getTaskName());
@@ -110,25 +114,6 @@ public class TaskManagerServiceImpl implements TaskManagerService {
     }
 
     @Override
-    public BaseResponse deleteByTaskId(long taskId) {
-        if (taskId <= 0) {
-            throw new TaskException("TaskId should not be less than 1");
-        }
-
-        try {
-            taskManagerFacade.deleteByTaskId(taskId);
-        } catch (Exception ex) {
-            logger.error("Unable to delete the Task", ex);
-            return new BaseResponse(HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase(), HttpStatus.UNPROCESSABLE_ENTITY.value(), "Unable to delete the task by taskId:" + taskId);
-        }
-
-        logger.info("Task deleted successfully taskId:{}", taskId);
-
-        return new BaseResponse(HttpStatus.OK.getReasonPhrase(), HttpStatus.OK.value(), "Task deleted successfully for taskId: " + taskId);
-
-    }
-
-    @Override
     public BaseResponse closeTaskById(long taskId) {
         int rowUpdated;
         if (taskId <= 0) {
@@ -149,5 +134,42 @@ public class TaskManagerServiceImpl implements TaskManagerService {
         logger.info("Task closed successfully taskId:{}", taskId);
 
         return new BaseResponse(HttpStatus.OK.getReasonPhrase(), HttpStatus.OK.value(), "Task closed successfully for taskId: " + taskId);
+    }
+
+    @Override
+    public ExtendedParentTaskListResponse findAllParentTasks() {
+        ExtendedParentTaskListResponse extendedParentTaskListResponse = new ExtendedParentTaskListResponse();
+        BaseResponse baseResponse;
+
+        List<ParentTask> parentTaskList = taskManagerFacade.findAllParentTasks();
+
+        if (!CollectionUtils.isEmpty(parentTaskList)) {
+            parentTaskList
+                    .forEach(task -> extendedParentTaskListResponse.getParentTasks()
+                            .add(new ParentTaskDto(task)));
+            baseResponse = new BaseResponse(HttpStatus.FOUND.getReasonPhrase(), HttpStatus.FOUND.value(), "Number of Parent Tasks found " + parentTaskList.size());
+
+            logger.info("Find number of parent task:{}", parentTaskList.size());
+        } else {
+            baseResponse = new BaseResponse(HttpStatus.NOT_FOUND.getReasonPhrase(), HttpStatus.NOT_FOUND.value(), "No Task found");
+            logger.info("No Parent Task found");
+        }
+
+        extendedParentTaskListResponse.setBaseResponse(baseResponse);
+
+        return extendedParentTaskListResponse;
+    }
+
+    @Override
+    public BaseResponse saveParentTask(ParentTaskRequest parentTaskRequest) {
+        ParentTask savedParentTask = taskManagerFacade.saveParentTask(parentTaskRequest);
+
+        if (savedParentTask != null) {
+            logger.info("Parent Task saved successfully :{}", parentTaskRequest.getParentTaskName());
+            return new BaseResponse(HttpStatus.CREATED.getReasonPhrase(), HttpStatus.CREATED.value(), "Parent Task saved successfully");
+        } else {
+            logger.info("Unable to save the parent task :{}", parentTaskRequest.getParentTaskName());
+            return new BaseResponse(HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase(), HttpStatus.UNPROCESSABLE_ENTITY.value(), "Failed to save parent task");
+        }
     }
 }
