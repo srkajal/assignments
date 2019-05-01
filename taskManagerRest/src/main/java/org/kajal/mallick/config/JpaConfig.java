@@ -4,6 +4,7 @@ import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -18,6 +19,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories("org.kajal.mallick")
+@Profile("mysql")
 class JpaConfig {
 
     @Autowired
@@ -45,8 +47,8 @@ class JpaConfig {
     @Bean
     public DataSource dataSource() {
         HikariDataSource hikariDataSource = new HikariDataSource();
-        hikariDataSource.setMaximumPoolSize(100);
-        hikariDataSource.setDataSourceClassName("com.mysql.cj.jdbc.MysqlDataSource");
+        hikariDataSource.setMaximumPoolSize(5);
+        hikariDataSource.setDataSourceClassName(env.getProperty("db.datasource.className"));
         hikariDataSource.addDataSourceProperty("url", env.getProperty("spring.datasource.url"));
         hikariDataSource.addDataSourceProperty("user", env.getProperty("spring.datasource.username"));
         hikariDataSource.addDataSourceProperty("password", env.getProperty("spring.datasource.password"));

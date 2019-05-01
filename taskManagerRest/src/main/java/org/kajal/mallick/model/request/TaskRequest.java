@@ -13,6 +13,7 @@ public class TaskRequest {
     private long taskId;
 
     @JsonProperty("parent_id")
+    @Min(value = 1, message = "Parent Id should be greater than 0")
     private long parentId;
 
     @NotNull(message = "Task should not be Blank")

@@ -18,6 +18,8 @@
 
     <properties>
         <failOnMissingWebXml>false</failOnMissingWebXml>
+        <org.dbunit.version>2.6.0</org.dbunit.version>
+        <spring.test.dbunit.version>1.2.1</spring.test.dbunit.version>
     </properties>
     <dependencies>
 
@@ -80,6 +82,25 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.dbunit</groupId>
+            <artifactId>dbunit</artifactId>
+            <version>${org.dbunit.version}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>junit</artifactId>
+                    <groupId>junit</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.github.springtestdbunit</groupId>
+            <artifactId>spring-test-dbunit</artifactId>
+            <version>${spring.test.dbunit.version}</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
