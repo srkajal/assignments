@@ -23,7 +23,7 @@ export class TaskEditComponent implements OnInit {
   submitted = false;
 
   ngOnInit() {
-    let editTaskId = localStorage.getItem("editTaskId");
+    let editTaskId = sessionStorage.getItem("editTaskId");
 
     if (!editTaskId) {
       alert("Invalid action.")

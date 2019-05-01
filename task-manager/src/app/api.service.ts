@@ -6,7 +6,7 @@ import { TaskRequest } from './model/task-request.model';
   providedIn: 'root'
 })
 export class ApiService {
-  API_URL = 'http://localhost:8080';
+  API_URL = 'http://localhost:8686';
   constructor(private httpClient: HttpClient) { }
 
   getAllTasks(){

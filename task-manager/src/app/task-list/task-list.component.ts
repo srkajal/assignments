@@ -39,8 +39,8 @@ export class TaskListComponent implements OnInit {
   }
 
   editTask(taskId: number){
-    localStorage.removeItem("editTaskId");
-    localStorage.setItem("editTaskId", taskId.toString());
+    sessionStorage.removeItem("editTaskId");
+    sessionStorage.setItem("editTaskId", taskId.toString());
     
     this.router.navigate(['edit-task']);
   }

@@ -38,3 +38,11 @@ npm run build:prerender && npm run serve:prerender
 ng serve --configuration=es
 
 ng serve --configuration=en
+
+##Buld file for Deployment
+ng build --prod --base-href /task-manager/
+##Internatinalization for deployment
+ng build --prod --i18n-file src/locale/messages.en.xlf --i18n-format xlf --i18n-locale en --base-href /task-manager/
+
+##Server endpoint
+http://localhost:8080/task-manager/
