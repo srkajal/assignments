@@ -4,6 +4,7 @@ import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
 import { Task } from '../model/task.model';
 import { TaskRequest } from '../model/task-request.model';
+import { ParentTask } from '../model/parent-task.model';
 
 @Component({
   selector: 'app-task-edit',
@@ -18,6 +19,8 @@ export class TaskEditComponent implements OnInit {
   defaultPrirority: number = 15;
   editTask: Task;
   taksRequest: TaskRequest = new TaskRequest();
+  parentTaskList: Array<ParentTask> = [];
+  submitted = false;
 
   ngOnInit() {
     let editTaskId = localStorage.getItem("editTaskId");
@@ -27,6 +30,8 @@ export class TaskEditComponent implements OnInit {
       this.router.navigate(['tasks']);
       return;
     }
+
+    this.getParentTaskList();
 
     this.apiService.getTaskById(Number(editTaskId)).subscribe((data: any) => {
       this.editTask = data.task;
@@ -52,10 +57,24 @@ export class TaskEditComponent implements OnInit {
     });
   }
 
+  // convenience getter for easy access to form fields
+  get formField() { return this.editForm.controls; }
+
   onSubmit() {
-    //console.log("Prirority:"+this.addForm.value.priority);
+    this.submitted = true;
+    //console.log("parent_id:" + this.addForm.value.parent_id);
+
     if (this.editForm.value.priority == "") {
       this.editForm.value.priority = this.defaultPrirority;
+    }
+
+    if (this.editForm.value.parent_id == "") {
+      return;
+    }
+
+    // stop here if form is invalid
+    if (this.editForm.invalid) {
+      return;
     }
     //console.log("TaskId:"+(Number(this.addForm.value.task_id) >0));
     this.apiService.updateTask(this.editForm.value).subscribe(response => this.router.navigate(['tasks']));
@@ -63,6 +82,12 @@ export class TaskEditComponent implements OnInit {
 
   cancel(){
     this.router.navigate(['tasks']);
+  }
+
+  getParentTaskList() {
+    this.apiService.getAllParentTasks().subscribe((data: any) => {
+      this.parentTaskList = data.parent_tasks;
+    });
   }
 
 }

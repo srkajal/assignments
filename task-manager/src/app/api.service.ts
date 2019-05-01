@@ -13,6 +13,10 @@ export class ApiService {
     return this.httpClient.get(`${this.API_URL}/api/task/findAllTasks`);
   }
 
+  getAllParentTasks(){
+    return this.httpClient.get(`${this.API_URL}/api/task/findAllParentTasks`);
+  }
+
   endTask(taskId: number){
     return this.httpClient.get(`${this.API_URL}/api/task/closeTaskById/`+taskId);
   }
