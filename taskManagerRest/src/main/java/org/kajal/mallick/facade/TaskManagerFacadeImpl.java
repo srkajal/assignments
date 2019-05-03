@@ -32,14 +32,22 @@ public class TaskManagerFacadeImpl implements TaskManagerFacade {
 
     @Override
     public Task saveTask(TaskRequest taskRequest) {
-        ParentTask parentTask = new ParentTask(taskRequest.getParentId());
+        ParentTask parentTask = null;
+        if (taskRequest.getParentId() > 0) {
+            parentTask = new ParentTask(taskRequest.getParentId());
+        }
+
         Task task = new Task(parentTask, taskRequest.getTaskName(), taskRequest.getStartDate(), taskRequest.getEndDate(), taskRequest.getPriority(), TaskManagerConstant.STATUS_OPEN);
         return taskManagerDao.saveTask(task);
     }
 
     @Override
     public Task update(TaskRequest taskRequest) {
-        ParentTask parentTask = new ParentTask(taskRequest.getParentId());
+        ParentTask parentTask = null;
+        if (taskRequest.getParentId() > 0) {
+            parentTask = new ParentTask(taskRequest.getParentId());
+        }
+
         Task task = new Task(taskRequest.getTaskId(), parentTask, taskRequest.getTaskName(), taskRequest.getStartDate(), taskRequest.getEndDate(), taskRequest.getPriority(), TaskManagerConstant.STATUS_OPEN);
         return taskManagerDao.saveTask(task);
     }
