@@ -43,7 +43,6 @@
       </div>
       <div class="col-md-6">
         <select id="parent_id" formControlName="parent_id" class="form-control" [ngClass]="{ 'is-invalid': submitted && formField.parent_id.errors }">
-          <option value="" disabled selected>select a parent</option>
           <option *ngFor="let parentTask of parentTaskList" [value]="parentTask.parent_id">
             {{parentTask.parent_task_name}}
           </option>

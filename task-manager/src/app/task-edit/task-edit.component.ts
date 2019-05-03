@@ -35,7 +35,7 @@ export class TaskEditComponent implements OnInit {
 
     this.apiService.getTaskById(Number(editTaskId)).subscribe((data: any) => {
       this.editTask = data.task;
-      //console.log("TaskId:"+editTaskId+", "+ this.editTask.parent_task.parent_id);
+      
       this.taksRequest.task_id = this.editTask.task_id;
       this.taksRequest.task_name = this.editTask.task_name;
       this.taksRequest.start_date = this.editTask.start_date.toString();
@@ -62,21 +62,16 @@ export class TaskEditComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    //console.log("parent_id:" + this.addForm.value.parent_id);
 
     if (this.editForm.value.priority == "") {
       this.editForm.value.priority = this.defaultPrirority;
-    }
-
-    if (this.editForm.value.parent_id == "") {
-      return;
     }
 
     // stop here if form is invalid
     if (this.editForm.invalid) {
       return;
     }
-    //console.log("TaskId:"+(Number(this.addForm.value.task_id) >0));
+    
     this.apiService.updateTask(this.editForm.value).subscribe(response => this.router.navigate(['tasks']));
   }
 
@@ -87,6 +82,7 @@ export class TaskEditComponent implements OnInit {
   getParentTaskList() {
     this.apiService.getAllParentTasks().subscribe((data: any) => {
       this.parentTaskList = data.parent_tasks;
+      this.parentTaskList.splice(0,0,new ParentTask(0,"Select a parent"));
     });
   }
 

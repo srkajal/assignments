@@ -17,21 +17,17 @@ export class TaskFilterPipe implements PipeTransform {
     FIELD_PRIORITY = 'priority';
 
     transform(tasks: Task[], filter: Task) {
-        //console.log("Inside the filter:"+filter.task_name);
         if(!tasks || !filter){
             return tasks;
         }
 
         return tasks.filter(t=>this.applyFilter(t, filter));
-        
     }
 
     applyFilter(task: Task, filter: Task): boolean{
         
         for(let field in filter){
-            //console.log("Field:"+filter[field]);
             if(filter[field]){
-                //console.log("Task type:"+ typeof task[field] +",Filter type:"+ typeof filter[field]+",Field name:"+ field);
                 if(typeof filter[field] === this.STRING_TYPE && typeof task[field] === this.STRING_TYPE){
                     if(field === this.FIELD_START_DATE){
                         return new Date(filter[field]) <= new Date(task[field]);

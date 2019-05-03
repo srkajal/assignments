@@ -30,7 +30,7 @@ export class TaskAddComponent implements OnInit {
       priority: ['', Validators.min(1)],
       start_date: ['', Validators.required],
       end_date: ['', Validators.required],
-      parent_id: ['', Validators.min(1)]
+      parent_id: [0, Validators.min(0)]
     });
   }
 
@@ -39,20 +39,16 @@ export class TaskAddComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    //console.log("parent_id:" + this.addForm.value.parent_id);
-
+    
     if (this.addForm.value.priority == "") {
       this.addForm.value.priority = this.defaultPrirority;
-    }
-
-    if (this.addForm.value.parent_id == "") {
-      return;
     }
 
     // stop here if form is invalid
     if (this.addForm.invalid) {
       return;
     }
+
     this.apiService.addTask(this.addForm.value).subscribe(response => this.router.navigate(['tasks']));
   }
 
@@ -63,6 +59,7 @@ export class TaskAddComponent implements OnInit {
   getParentTaskList() {
     this.apiService.getAllParentTasks().subscribe((data: any) => {
       this.parentTaskList = data.parent_tasks;
+      this.parentTaskList.splice(0,0,new ParentTask(0,"Select a parent"));
     });
   }
 }

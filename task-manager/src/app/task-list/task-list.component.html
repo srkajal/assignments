@@ -103,7 +103,7 @@
           <div class="rounded bg-secondary text-white">{{task.task_name}}</div>
         </div>
         <div class="col-md-2">
-          <div class="rounded bg-secondary text-white">{{task.parent_task.parent_task_name}}</div>
+          <div *ngIf="task.parent_task != null" class="rounded bg-secondary text-white">{{task.parent_task.parent_task_name}}</div>
         </div>
         <div class="col-md-1">
           {{task.priority}}
