@@ -52,7 +52,7 @@ export class TaskEditComponent implements OnInit {
       priority: ['', Validators.min(1)],
       start_date: ['', Validators.required],
       end_date: ['', Validators.required],
-      parent_id: ['', Validators.min(1)],
+      parent_id: ['', Validators.min(0)],
       task_id: ['', Validators.min(1)]
     });
   }
