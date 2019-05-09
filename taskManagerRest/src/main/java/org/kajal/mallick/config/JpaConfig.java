@@ -19,7 +19,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories("org.kajal.mallick")
-@Profile("mysql")
+@Profile("!test")
 class JpaConfig {
 
     @Autowired
