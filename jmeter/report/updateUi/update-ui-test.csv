@@ -1,0 +1,593 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1557465345265,7970,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608847,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465353888,1478,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608853,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465355988,1597,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608859,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465358139,1415,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608865,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465360197,1436,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608871,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465362230,1416,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608877,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465364351,1536,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608884,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465366772,1690,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608891,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465368701,935,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(12) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61198}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: a8fb26c88c8f59e2fca7c67d96c45de7
+*** Element info: {Using=css selector, value=div:nth-child(12) .col-md-1:nth-child(6) .btn}",Thread Group 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4513,0,2,2,null,0,0,0
+1557465369234,1675,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608898,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465371529,1639,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608905,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465373960,5916,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608912,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465369662,11482,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,608919,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465380643,1947,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608926,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465381941,1796,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,608933,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465383397,1796,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608940,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465384548,1785,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,608947,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465385978,1674,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608954,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465387018,1821,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,608961,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465388508,1710,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,608968,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465389553,2065,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,15237,0,3,3,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465390963,1329,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(25) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61166}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 7c2218335b3dd4c13225055674f807d9
+*** Element info: {Using=css selector, value=div:nth-child(25) .col-md-1:nth-child(6) .btn}",Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4514,0,3,3,null,0,0,0
+1557465391668,1787,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,15237,0,3,3,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465393495,1919,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,608989,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465396157,1898,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,608996,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465392308,7579,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,609003,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465398942,1900,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,609010,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465393882,9039,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609017,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465401717,2040,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,609024,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465403917,1985,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609031,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465404782,1863,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,609038,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465406725,1837,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609045,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465400837,8076,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,609052,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465407382,1936,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,609059,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465409369,1963,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609066,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465409747,2094,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,609073,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465410328,2234,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,609080,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465412398,2015,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609087,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465412819,2014,Task WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,609094,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465413428,1927,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,609101,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465415304,2412,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609108,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465416548,1882,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,14417,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465418529,2157,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609122,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465419311,1919,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,609129,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465421566,1863,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609136,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465422039,1948,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,609143,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465424313,2015,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609150,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465424790,2033,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,609157,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465418800,9932,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609164,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465427760,2228,Task WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,15237,0,3,3,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465429803,1850,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609178,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465432317,1846,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609185,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465427254,7673,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609192,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465435240,1928,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609199,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465435958,1867,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609206,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465438003,1819,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609213,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465438527,1843,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609220,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465440588,2285,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,15237,0,3,3,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465441364,1929,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,15237,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465444093,2002,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609241,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465446913,1737,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609248,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465442913,7228,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609255,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465449374,1994,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609262,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465450998,1938,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609269,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465443711,9772,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609276,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465452281,2334,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,14417,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465453993,2256,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609290,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465454537,2267,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609297,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465455557,2281,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609304,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465457262,2209,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609311,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465457812,2083,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609318,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465458860,2312,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609325,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465460569,2767,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609332,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465461015,2759,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609339,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465462494,2327,Task WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,609346,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465464234,2236,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609353,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465467408,1723,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609360,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465470043,1937,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609367,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465472687,1958,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609374,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465475375,1955,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609381,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465469573,7898,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609388,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465478380,361,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(87) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61367}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 0c7f0c27c74a8a0cc0e460f05da51223
+*** Element info: {Using=css selector, value=div:nth-child(87) .col-md-1:nth-child(6) .btn}",Thread Group 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4514,0,3,3,null,0,0,0
+1557465478752,288,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(88) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61367}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 0c7f0c27c74a8a0cc0e460f05da51223
+*** Element info: {Using=css selector, value=div:nth-child(88) .col-md-1:nth-child(6) .btn}",Thread Group 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4514,0,3,3,null,0,0,0
+1557465464641,15393,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609395,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465478264,2189,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609402,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465480915,2072,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609409,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465481358,1986,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609416,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465483922,2077,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609423,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465484264,2063,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609430,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465486842,1808,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609437,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465487186,1827,Task WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,609444,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465489454,1781,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609451,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465492161,245,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(97) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61322}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 60325a83dd6980b87b9717464e733660
+*** Element info: {Using=css selector, value=div:nth-child(97) .col-md-1:nth-child(6) .btn}",Thread Group 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4514,0,3,3,null,0,0,0
+1557465493641,1000,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(99) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61408}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 1c874b8d95462ef279d330412a1a60bc
+*** Element info: {Using=css selector, value=div:nth-child(99) .col-md-1:nth-child(6) .btn}",Thread Group 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4514,0,3,3,null,0,0,0
+1557465479051,14744,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609458,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465494851,2016,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609466,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465497777,2046,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609474,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465492416,9246,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609481,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465500719,2003,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609489,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465502639,1997,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609497,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465503637,1978,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609505,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465505569,1940,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609513,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465506625,1786,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609521,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465508297,1839,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609529,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465509204,1873,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609537,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465494655,17270,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609545,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465510954,2219,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609553,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465512213,2022,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609561,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465512919,1997,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609569,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465514037,2004,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609577,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465515105,2517,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,14417,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465517349,2187,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609593,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465517671,2902,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609601,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465520668,2057,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609609,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465521539,2113,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609617,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465515863,9392,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609625,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465523652,2294,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609633,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465524707,2422,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609641,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465518815,10096,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609657,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465526357,2509,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609657,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465527100,2562,Task WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,609665,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465528246,2644,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609673,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465530202,2437,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609681,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465532035,2066,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609689,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465533559,2115,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609697,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465535065,2123,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609705,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465536473,1934,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609713,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465530216,8737,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609721,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465538002,2059,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609729,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465539351,2380,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609737,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465539982,3303,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,14417,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465542797,2148,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609753,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465544227,2150,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609761,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465545861,2016,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609769,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465547284,2124,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609777,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465548947,2197,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609785,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465541050,11011,Task WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,609793,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465552188,2131,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609801,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465543799,12808,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,609809,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465555142,2160,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609817,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465550399,8841,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609825,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465557528,2000,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,609833,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465558268,2058,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609841,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465560152,2088,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609849,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465560426,2048,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,609857,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465561177,2224,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609865,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465563359,1956,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,609873,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465566246,2009,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,609881,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465569196,2257,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,609889,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465563097,8586,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609897,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465564280,9109,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609905,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465572865,2326,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609913,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465574440,2299,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609921,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465576145,2274,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609929,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465569689,10772,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465577796,2255,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609937,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465579433,2554,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609953,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465580508,2417,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,609961,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465572712,10309,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,609969,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465581408,2371,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,609977,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465583201,2396,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,609985,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465584002,2466,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610001,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465584073,2464,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,610001,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465584964,2469,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,610009,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465586856,2488,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,610017,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465587683,2439,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610033,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465587776,2358,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,610033,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465588548,2515,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,610041,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465590482,3000,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,15237,0,5,5,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465591635,2634,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610057,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465591772,2701,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,610065,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465592576,2926,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,610073,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465593543,3207,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,610081,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465595901,2882,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610089,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465596437,2778,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,610097,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465597109,2862,Task WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,610105,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465598138,2723,Task WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,610113,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465600555,2608,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,610121,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465603971,2018,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,14417,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465606794,1865,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,610137,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465600102,8837,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610145,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465609434,1927,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,610153,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465609726,1939,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610161,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465594154,18675,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,14417,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465612233,2162,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,610177,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465612674,1995,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610185,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465615349,2466,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465615455,2545,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465617853,2170,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,14417,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465618738,2321,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(195) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61631}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 3deecb01e812ae8a72ccf8cc464324d0
+*** Element info: {Using=css selector, value=div:nth-child(195) .col-md-1:nth-child(6) .btn}",Thread Group 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4517,0,4,4,null,0,0,0
+1557465618042,2190,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610217,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465620076,2636,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,610225,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465621826,2335,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610233,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465623792,2320,Task WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,610241,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465625248,2548,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610249,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465628654,2038,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610257,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465613626,17805,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610265,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465631812,1939,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610273,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465632339,1925,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610281,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465634629,2122,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610289,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465635100,2174,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610297,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465621071,16986,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610305,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465637728,2273,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610313,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465638249,2138,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610321,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465639009,2127,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610329,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465642441,2152,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465641714,1976,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,14417,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465644645,2227,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610361,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465644744,2153,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610361,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465647949,2334,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610377,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465647990,2322,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610377,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465641002,9699,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610385,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465651362,2473,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610393,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465651361,2604,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610401,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465651856,2516,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610409,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465643807,10784,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610417,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465655130,2777,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610433,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465655248,2656,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610433,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465655559,2637,Task WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,610441,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465655823,2682,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610449,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465659134,2211,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610465,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465659145,2200,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610465,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465659553,2048,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610473,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465662290,2043,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610481,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465662278,2174,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610489,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465662622,2084,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610497,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465665187,2801,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465665324,2720,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465665611,2760,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465668801,1055,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(236) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61726}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 92e2754c41e66f568cd7e12bbec61a5e
+*** Element info: {Using=css selector, value=div:nth-child(236) .col-md-1:nth-child(6) .btn}",Thread Group 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4517,0,4,4,null,0,0,0
+1557465668099,2462,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610529,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465668032,3450,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610537,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465669868,2367,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610545,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465671584,2286,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465672560,2409,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610561,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465673267,2473,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610569,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465673908,2463,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610577,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465668419,10235,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610585,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465676963,2557,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610593,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465677539,2418,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610601,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465679794,2466,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610609,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465680677,2487,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610617,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465681090,2449,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610625,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465683375,2346,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610633,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465676175,10608,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610649,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465684356,2427,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610649,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465684660,2602,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610657,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465686995,2350,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,14417,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465687943,2498,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610681,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465687976,2439,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610681,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465688412,2484,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610689,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465690398,2986,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,14417,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465691919,2959,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,14417,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465691998,2843,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610713,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465692393,2931,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610721,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465694729,2784,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610729,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465696177,2606,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610745,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465696045,2766,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610745,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465696636,2649,Task WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,610753,0,5,5,http://localhost:8080/task-manager/tasks,0,0,0
+1557465698885,2626,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465700146,2566,Task WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,610769,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465701558,2361,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,14417,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465693896,11872,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,610785,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465703964,2877,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610793,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465706719,2049,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,610801,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465700053,9595,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610809,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465707797,2172,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610817,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465709770,2110,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,610825,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465710595,2175,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610833,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465710932,2199,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610841,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465712833,2164,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,610849,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465713662,2251,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610857,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465713992,2307,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,14417,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465716121,2436,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465718820,1115,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(281) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61824}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: e1ceee09fbc1a0064f6d984f13a57657
+*** Element info: {Using=css selector, value=div:nth-child(281) .col-md-1:nth-child(6) .btn}",Thread Group 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4517,0,4,4,null,0,0,0
+1557465717343,2346,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610881,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465717490,2501,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610889,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465718597,2514,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,610897,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465720956,2499,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610905,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465721232,2417,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610913,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465724510,2296,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610921,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465724743,2421,Task WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,610929,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465727857,2206,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610937,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465719948,11352,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,610945,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465722248,9925,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,610953,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465731020,2160,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610961,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465732348,1983,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,610969,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465733122,2025,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,610977,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465734138,2107,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,610985,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465735267,2076,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,610993,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465736073,2136,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,611001,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465737285,1994,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,611009,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465738251,1986,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611017,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465739072,2057,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,611025,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465740184,2640,Task WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465741500,2233,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,14417,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465742492,2078,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,611049,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465745647,2091,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,15237,0,3,3,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465743815,3115,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611057,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465747769,2191,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,611081,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465747902,2068,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611081,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465750838,2053,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,611089,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465750896,2125,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611097,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465753802,2114,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,611113,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465753925,2080,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611113,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465743714,12953,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611121,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465756947,2104,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,611137,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465757009,2054,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611137,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465757625,1987,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611145,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465760476,2117,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,15237,0,3,3,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465759862,2143,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,611161,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465759910,2142,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611161,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465762634,2004,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611177,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465762894,2063,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,611193,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465762970,2030,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611193,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465765508,2502,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465765907,2477,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,15237,0,4,4,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465768047,420,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(322) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61870}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 560478af12aba79406cc473df93f6135
+*** Element info: {Using=css selector, value=div:nth-child(322) .col-md-1:nth-child(6) .btn}",Thread Group 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4517,0,4,4,null,0,0,0
+1557465768454,2980,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611217,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465768474,4141,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611225,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465772419,2140,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611233,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465765857,9210,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,611241,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465773597,2454,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611249,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465775686,2482,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611257,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465776312,2334,Task WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,611265,0,4,4,http://localhost:8080/task-manager/tasks,0,0,0
+1557465777257,2420,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611273,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465768833,11446,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611281,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465779326,2488,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,15237,0,3,3,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465780977,2255,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611297,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465781339,2245,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611305,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465781878,3119,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,611313,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465784238,2176,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611321,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465784505,2133,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611329,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465786022,2056,Task WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,15237,0,3,3,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465787501,1911,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611345,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465787679,1887,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611353,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465790323,2229,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,15237,0,3,3,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465790070,2362,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611369,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465792589,1864,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,14417,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465793380,2029,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611385,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465794531,2766,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611393,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465796289,1903,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611401,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465798150,1816,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611409,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465798996,1901,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611417,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465800899,2109,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611425,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465801835,2106,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611433,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465803978,2166,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611441,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465804874,2169,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611449,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465793588,15608,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611465,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465807158,2059,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611465,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465807941,2236,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611473,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465810188,2156,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,14417,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465810208,2120,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611489,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465811147,2148,Task WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,611497,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465813183,2098,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611513,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465813282,2007,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611513,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465816289,449,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(361) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61917}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 96b61327ef43c217573bdb3a78931baf
+*** Element info: {Using=css selector, value=div:nth-child(361) .col-md-1:nth-child(6) .btn}",Thread Group 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4517,0,3,3,null,0,0,0
+1557465818569,1361,Task WebDriver Sampler,500,"no such element: Unable to locate element: {""method"":""css selector"",""selector"":""div:nth-child(363) .col-md-1:nth-child(6) .btn""}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'KATHE', ip: '192.168.6.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:62012}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(system), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 040871ceaec00b31647d420523f3bc61
+*** Element info: {Using=css selector, value=div:nth-child(363) .col-md-1:nth-child(6) .btn}",Thread Group 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",4517,0,3,3,null,0,0,0
+1557465816183,7656,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611521,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465816749,8208,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,15237,0,3,3,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465824782,2190,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611537,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465825003,2366,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611545,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465828017,2133,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611553,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465828303,2092,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611561,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465831192,1961,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611569,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465831363,1949,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611577,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465834120,2063,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611593,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465834004,2129,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611593,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465819940,17957,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611601,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465837185,1994,Task WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,611609,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465837206,2123,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611617,0,3,3,http://localhost:8080/task-manager/tasks,0,0,0
+1557465838822,2095,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611625,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465840233,1770,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611633,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465841686,1667,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611641,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465842756,1709,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611649,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465844063,1655,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611657,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465845103,1741,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,15237,0,2,2,http://localhost:8080/task-manager/edit-task,0,0,0
+1557465846877,1672,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611673,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465849108,1479,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611681,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465851217,1478,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611689,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465846431,7277,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611697,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465853420,1643,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611705,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465854388,1643,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611713,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465855786,1674,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611721,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465856672,1709,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611729,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465858204,1626,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611737,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465859032,1693,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611745,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465860493,1973,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,611753,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465861381,1765,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611761,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465863171,1662,Task WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,14417,0,2,2,http://localhost:8080/task-manager/tasks,0,0,0
+1557465863923,1679,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611777,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465866225,1545,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611785,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465868300,1404,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611793,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465870398,1406,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611801,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465872433,1374,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611809,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465874413,1387,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611817,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465876436,1421,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611825,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465878491,1448,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611833,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465880705,1385,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611841,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0
+1557465882709,10782,Task WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,611847,0,1,1,http://localhost:8080/task-manager/tasks,0,0,0

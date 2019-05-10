@@ -1,0 +1,32 @@
+{
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 400,
+    "errorCount" : 12,
+    "errorPct" : 3.0,
+    "meanResTime" : 3127.737500000001,
+    "minResTime" : 245.0,
+    "maxResTime" : 18675.0,
+    "pct1ResTime" : 7875.500000000007,
+    "pct2ResTime" : 10305.3,
+    "pct3ResTime" : 17267.160000000003,
+    "throughput" : 0.7296261031034647,
+    "receivedKBytesPerSec" : 376.29456797071373,
+    "sentKBytesPerSec" : 0.0
+  },
+  "Task WebDriver Sampler" : {
+    "transaction" : "Task WebDriver Sampler",
+    "sampleCount" : 400,
+    "errorCount" : 12,
+    "errorPct" : 3.0,
+    "meanResTime" : 3127.737500000001,
+    "minResTime" : 245.0,
+    "maxResTime" : 18675.0,
+    "pct1ResTime" : 7875.500000000007,
+    "pct2ResTime" : 10305.3,
+    "pct3ResTime" : 17267.160000000003,
+    "throughput" : 0.7296261031034647,
+    "receivedKBytesPerSec" : 376.29456797071373,
+    "sentKBytesPerSec" : 0.0
+  }
+}
