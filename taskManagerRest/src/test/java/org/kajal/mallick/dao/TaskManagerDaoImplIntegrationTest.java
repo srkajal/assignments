@@ -13,7 +13,7 @@ import org.kajal.mallick.util.TaskManagerConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Profile;
+import org.springframework.test.annotation.IfProfileValue;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -27,7 +27,7 @@ import static org.mockito.MockitoAnnotations.initMocks;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK, classes = SpringBootAssignmentApplication.class)
 @AutoConfigureMockMvc
 @TestPropertySource(locations = "classpath:application-integrationtest.properties")
-@Profile("test")
+@IfProfileValue(name = "live-external-tests-enabled", value = "true")
 @Sql("/sql/createTask.sql")
 public class TaskManagerDaoImplIntegrationTest {
 
