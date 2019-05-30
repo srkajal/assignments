@@ -23,8 +23,8 @@ public class ParentTaskRequest {
     }
 
     public ParentTaskRequest(long parentId, @NotNull(message = "Parent Task name should not be Blank") @NotEmpty(message = "Parent Task name should not be Blank") String parentTaskName) {
+        this(parentTaskName);
         this.parentId = parentId;
-        this.parentTaskName = parentTaskName;
     }
 
     public long getParentId() {
