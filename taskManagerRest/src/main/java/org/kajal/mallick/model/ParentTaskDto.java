@@ -20,6 +20,9 @@ public class ParentTaskDto {
         this.parentTask = parentTask;
     }
 
+    public ParentTaskDto() {
+    }
+
     public long getParentId() {
         return parentId;
     }

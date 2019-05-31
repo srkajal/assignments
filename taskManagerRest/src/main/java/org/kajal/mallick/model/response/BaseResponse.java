@@ -17,8 +17,7 @@ public class BaseResponse {
     }
 
     public BaseResponse(String status, Integer code, String message) {
-        this.status = status;
-        this.code = code;
+        this(status, code);
         this.message = message;
     }
 
