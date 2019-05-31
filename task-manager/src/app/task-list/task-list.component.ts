@@ -20,9 +20,9 @@ export class TaskListComponent implements OnInit {
   }
 
   getAllTasks(){
-    this.apiService.getAllTasks().subscribe(data=>
+    this.apiService.getAllTasks().subscribe((data: any)=>
     {
-      this.taskList = data;
+      this.taskList = data.tasks;
     });
   }
 

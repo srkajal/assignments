@@ -18,7 +18,7 @@ export class TaskAddComponent implements OnInit {
   addForm: FormGroup;
   defaultPrirority: number = 15;
   editTask: Task;
-  parentTaskList: Array<ParentTask> = [new ParentTask(0,"Select a parent")];
+  parentTaskList: Array<ParentTask> = [];
   taksRequest: TaskRequest = new TaskRequest();
   submitted = false;
 
@@ -57,9 +57,9 @@ export class TaskAddComponent implements OnInit {
   }
 
   getParentTaskList() {
-    this.apiService.getAllParentTasks().subscribe(data => {
-      console.log(this.parentTaskList+":"+data.length);
-      data.forEach(d=>this.parentTaskList.push(d));
+    this.apiService.getAllParentTasks().subscribe((data: any) => {
+      this.parentTaskList = data.parent_tasks;
+      this.parentTaskList.splice(0,0,new ParentTask(0,"Select a parent"));
     });
   }
 }

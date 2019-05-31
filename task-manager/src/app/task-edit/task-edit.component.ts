@@ -33,8 +33,8 @@ export class TaskEditComponent implements OnInit {
 
     this.getParentTaskList();
 
-    this.apiService.getTaskById(Number(editTaskId)).subscribe(data => {
-      this.editTask = data;
+    this.apiService.getTaskById(Number(editTaskId)).subscribe((data: any) => {
+      this.editTask = data.task;
       
       this.taksRequest.task_id = this.editTask.task_id;
       this.taksRequest.task_name = this.editTask.task_name;
@@ -80,8 +80,9 @@ export class TaskEditComponent implements OnInit {
   }
 
   getParentTaskList() {
-    this.apiService.getAllParentTasks().subscribe(data => {
-      this.parentTaskList = data;
+    this.apiService.getAllParentTasks().subscribe((data: any) => {
+      this.parentTaskList = data.parent_tasks;
+      this.parentTaskList.splice(0,0,new ParentTask(0,"Select a parent"));
     });
   }
 
